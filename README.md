@@ -1,12 +1,22 @@
 # Front Project
 - Next.js 를 활용한 Front end project
 
-## Subject
-- 아직 무엇을 할 지 결정하지 못했음
+## What to do?
+- 게시판 서비스로 시작하여 결재문서 상신까지 할 수 있도록한다
+- 회원이 사용할 수 있는 게시판
+- 회원의 등급 별로 할 수 있는 행위를 제한할 수 있도록
 
-## Skill
-- Next.js
-- axios
+## Environments
+- next 13.5.6
+- cookies-next 4.0.0
+- axios 1.5.1
+- tailwindcss 3
+- flowbite 1.8.1
+- flowbite-react 0.6.4
+- zustand 4.4.6
+- @tanstack/react-query 5.7.2
+- @tanstack/react-table 8.10.7
+- typescript 5
 
 ## How to run
 ```bash
