@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { getCookie, setCookie } from "cookies-next";
+import { deleteCookie, getCookie, setCookie } from "cookies-next";
 
 interface LoginModalType {
   isOpen: boolean,
@@ -79,16 +79,29 @@ const getLoginCookieData = ():LoginDataType => {
 }
 
 const setLoginCookieData = (param: LoginDataType | undefined) => {
-  setCookie('token', param?.token);
-  setCookie('address', param?.address);
-  setCookie('addressDetail', param?.addressDetail);
-  setCookie('birthDay', param?.birthDay);
-  setCookie('email', param?.email);
-  setCookie('gender', param?.gender);
-  setCookie('mobile', param?.mobile);
-  setCookie('nickname', param?.nickname);
-  setCookie('username', param?.username);
-  setCookie('zipCode', param?.zipCode);
+  if (param) {
+    setCookie('token', param?.token);
+    setCookie('address', param?.address);
+    setCookie('addressDetail', param?.addressDetail);
+    setCookie('birthDay', param?.birthDay);
+    setCookie('email', param?.email);
+    setCookie('gender', param?.gender);
+    setCookie('mobile', param?.mobile);
+    setCookie('nickname', param?.nickname);
+    setCookie('username', param?.username);
+    setCookie('zipCode', param?.zipCode);
+  } else {
+    deleteCookie('token');
+    deleteCookie('address');
+    deleteCookie('addressDetail');
+    deleteCookie('birthDay');
+    deleteCookie('email');
+    deleteCookie('gender');
+    deleteCookie('mobile');
+    deleteCookie('nickname');
+    deleteCookie('username');
+    deleteCookie('zipCode');
+  }
 }
 
 export {
