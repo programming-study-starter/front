@@ -7,6 +7,10 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm
 ENV TZ Asia/Seoul
 
 RUN apt-get update
+RUN apt-get -y install openssh-client
+RUN ssh-keygen -q -t rsa -N '' -f /id_rsa
+RUN eval $(ssh-agent)
+RUN ssh-add ~/.ssh/id_rsa
 
 # 테마 적용
 RUN sed -i 's/codespaces/agnoster/' /home/node/.zshrc
