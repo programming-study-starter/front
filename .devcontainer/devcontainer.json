@@ -33,7 +33,7 @@
     "git": "latest",
     "sshd": "latest",
 	},
-	"forwardPorts": [3000, 8080, 80, 443],
+	"forwardPorts": [3000, 8080, 80, 22, 443],
 	"postCreateCommand": "npm install",
 	"mounts": [
 		"source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",

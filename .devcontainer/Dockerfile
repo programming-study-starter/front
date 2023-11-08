@@ -10,8 +10,7 @@ RUN apt-get update
 RUN apt-get -y install openssh-client
 RUN ssh-keygen -q -t rsa -N '' -f /id_rsa
 RUN eval $(ssh-agent)
-COPY .ssh/id_rsa /root/.ssh/ 
-COPY .ssh/id_rsa.pub /root/.ssh/
+COPY .ssh/ /root/.ssh/ 
 RUN chmod 600 /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa.pub
 
