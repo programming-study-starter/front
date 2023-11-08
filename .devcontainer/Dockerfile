@@ -10,7 +10,11 @@ RUN apt-get update
 RUN apt-get -y install openssh-client
 RUN ssh-keygen -q -t rsa -N '' -f /id_rsa
 RUN eval $(ssh-agent)
-RUN ssh-add ~/.ssh/id_rsa
+COPY .ssh/id_rsa /root/.ssh/ 
+COPY .ssh/id_rsa.pub /root/.ssh/
+RUN chmod 600 /root/.ssh/id_rsa
+RUN chmod 600 /root/.ssh/id_rsa.pub
+
 
 # 테마 적용
 RUN sed -i 's/codespaces/agnoster/' /home/node/.zshrc
