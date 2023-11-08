@@ -6,18 +6,8 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm
 # 시간 및 날짜 설정
 ENV TZ Asia/Seoul
 
-RUN apt-get update && apt-get install -y locales
-# 한국어 설정   
-RUN locale-gen ko_KR.UTF-8
-RUN export LC_ALL=ko_KR.UTF-8
+RUN apt-get update
 
 # 테마 적용
 RUN sed -i 's/codespaces/agnoster/' /home/node/.zshrc
 RUN sed -i'' -r -e "/prompt_hg/a\  prompt_newline" /home/node/.oh-my-zsh/themes/agnoster.zsh-theme
-
-# [Optional] Uncomment if you want to install an additional version of node using nvm
-ARG EXTRA_NODE_VERSION=20.9.0
-RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
-
-# [Optional] Uncomment if you want to install more global node modules
-RUN su node -c "npm install -g yarn @vue/cli parcel-bundler"
