@@ -6,8 +6,8 @@
 
 - VS Code
 - VS Code Plugin Dev Container
-  - (https://booiljung.github.io/technical_articles/vscode/node-dev-container-1.html)[https://booiljung.github.io/technical_articles/vscode/node-dev-container-1.html]
-  - (https://doc.skill.or.kr/remote-containers-visual-studio-code-feat.dockerfile)[https://doc.skill.or.kr/remote-containers-visual-studio-code-feat.dockerfile]
+  - (Dev Container로 React JavaScript 개발환경 구성)[https://booiljung.github.io/technical_articles/vscode/node-dev-container-1.html]
+  - (VS Code devcontainers Dockerfile)[https://doc.skill.or.kr/remote-containers-visual-studio-code-feat.dockerfile]
 
 ## What to do?
 
