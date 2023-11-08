@@ -1,0 +1,15 @@
+version: '3'
+services:
+  front:
+    image: ${IMAGE_NAME}:${VERSION}
+    build:
+      context: ../
+      dockerfile: ${DOCKER_FILE}
+      args:
+        variable: ${VARIABLE}
+    ports:
+      - "3000:3000"
+      # 또는
+      # - target: 3000       ## 컨테이너 내부 포트
+      #   published: 3000    ## 호스트OS에서 공개할 포트
+      #   protocol: tcp      ## 포트 프로토콜

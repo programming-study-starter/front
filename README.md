@@ -1,6 +1,10 @@
 # Front Project
 - Next.js 를 활용한 Front end project
 
+## Tool
+- VS Code
+- (VS Code Plugin Dev Container)[https://booiljung.github.io/technical_articles/vscode/node-dev-container-1.html]
+
 ## What to do?
 - 게시판 서비스로 시작하여 결재문서 상신까지 할 수 있도록한다
 - 회원이 사용할 수 있는 게시판

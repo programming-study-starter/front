@@ -30,7 +30,7 @@ export default function NavbarComponent() {
 
   return (
     <div>
-      <header className="fixed w-full z-[1000]">
+      <header className="w-full z-[1000]">
         <Navbar fluid rounded>
           <Navbar.Brand>
             <Image src={`/images/logo.png`} alt="logo" width={20} height={20} />
