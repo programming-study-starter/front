@@ -27,6 +27,22 @@
 - @tanstack/react-query 5.7.2
 - @tanstack/react-table 8.10.7
 - typescript 5
+- Dev Containers(VS Code)
+
+## Dev Container 가이드
+
+### Dev Conatiner 를 실행하기 전 Github 에 등록한 id_rsa, id_rsa.pub 파일을 .devcontainer/.ssh 폴더에 넣으세요
+
+- Dev Conatiner 를 실행하기 전에 아래 명령어를 실행하세요
+
+```bash
+# 예제
+pwd
+/home/wslUbuntu/workspace/front
+
+cp ~/.ssh/id_rsa ./.devcontainer/.ssh/
+cp ~/.ssh/id_rsa.pub ./.devcontainer/.ssh/
+```
 
 ## How to run
 
