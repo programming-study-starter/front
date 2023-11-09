@@ -1,42 +1,45 @@
 {
-	"name": "Node.js & TypeScript",
-	"build": {
-			"dockerfile": "Dockerfile",
-	},
-	"extensions": [
-		"dbaeumer.vscode-eslint",
-    "eamodio.gitlens-insiders",
-		"esbenp.prettier-vscode",
-		"ms-vscode.vscode-typescript-tslint-plugin",
-    "octref.vetur",
-    "Orta.vscode-jest",
-    "ritwickdey.LiveServer",
-    "csstools.postcss",
-    "ms-python.python",
-    "bradlc.vscode-tailwindcss",
-    "mechatroner.rainbow-csv",
-	],
-	"settings": {
-		"files.eol": "\n",
-		"editor.tabSize": 2,
-		"terminal.integrated.shell.linux": "/bin/bash",
-		"typescript.validate.enable": false,
-		"eslint.alwaysShowStatus": true,
-		"editor.formatOnSave": true,
-		"eslint.workingDirectories": [{ "mode": "auto" }],
-		"editor.codeActionsOnSave": {
-			"source.fixAll.eslint": true
-		},
-		"eslint.validate": ["javascript", "typescript"]
-	},
-	"features": {
+  "name": "Node.js & TypeScript",
+  "build": {
+      "dockerfile": "Dockerfile",
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens-insiders",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "octref.vetur",
+        "Orta.vscode-jest",
+        "ritwickdey.LiveServer",
+        "csstools.postcss",
+        "ms-python.python",
+        "bradlc.vscode-tailwindcss",
+        "mechatroner.rainbow-csv",
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.tabSize": 2,
+        "typescript.validate.enable": false,
+        "eslint.alwaysShowStatus": true,
+        "editor.formatOnSave": true,
+        "eslint.workingDirectories": [{ "mode": "auto" }],
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "eslint.validate": ["javascript", "typescript"]
+      },
+    }
+  },
+  "features": {
     "git": "latest",
     "sshd": "latest",
-	},
-	"forwardPorts": [3000, 8080, 80, 22, 443],
-	"postCreateCommand": "npm install",
-	"mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
-	],
-	"remoteUser": "root",
+  },
+  "forwardPorts": [3000, 8080, 80, 22, 443],
+  "postCreateCommand": "npm install",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
+  ],
+  "remoteUser": "root",
 }
