@@ -3,11 +3,17 @@
   "build": {
       "dockerfile": "Dockerfile",
   },
+  "features": {
+    "git": "latest",
+    "sshd": "latest",
+  },
+  "forwardPorts": [3000, 8080, 8090, 80, 22, 443],
+  "appPort": [3000],
   "customizations": {
     "vscode": {
       "extensions": [
         "dbaeumer.vscode-eslint",
-        "eamodio.gitlens-insiders",
+        "eamodio.gitlens",
         "esbenp.prettier-vscode",
         "ms-vscode.vscode-typescript-tslint-plugin",
         "octref.vetur",
@@ -21,6 +27,7 @@
       "settings": {
         "files.eol": "\n",
         "editor.tabSize": 2,
+        "editor.renderWhitespace": "all",
         "typescript.validate.enable": false,
         "eslint.alwaysShowStatus": true,
         "editor.formatOnSave": true,
@@ -28,18 +35,12 @@
         "editor.codeActionsOnSave": {
           "source.fixAll.eslint": true
         },
-        "eslint.validate": ["javascript", "typescript"]
+        "eslint.validate": ["javascript", "typescript"],
+        "remote.localPortHost": "allInterfaces",
       },
     }
   },
-  "features": {
-    "git": "latest",
-    "sshd": "latest",
-  },
-  "forwardPorts": [3000, 8080, 80, 22, 443],
+  "runArgs": ["--network=host"],
   "postCreateCommand": "npm install",
-  "mounts": [
-    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
-  ],
   "remoteUser": "root",
 }

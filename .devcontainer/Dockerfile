@@ -6,15 +6,19 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm
 # 시간 및 날짜 설정
 ENV TZ Asia/Seoul
 
-RUN apt-get update
-RUN apt-get -y install openssh-client
-RUN ssh-keygen -q -t rsa -N '' -f /id_rsa
-RUN eval $(ssh-agent)
-COPY .ssh/ /root/.ssh/ 
-RUN chmod 600 /root/.ssh/id_rsa
-RUN chmod 600 /root/.ssh/id_rsa.pub
+RUN rm -rf /root/.ssh && \
+    mkdir -p /root/.ssh && \
+    chmod 700 /root/.ssh
 
+COPY .ssh/config /root/.ssh/ 
+COPY .ssh/id_rsa /root/.ssh/ 
+COPY .ssh/id_rsa.pub /root/.ssh/ 
 
-# 테마 적용
-RUN sed -i 's/codespaces/agnoster/' /home/node/.zshrc
-RUN sed -i'' -r -e "/prompt_hg/a\  prompt_newline" /home/node/.oh-my-zsh/themes/agnoster.zsh-theme
+RUN apt-get update && \
+    apt-get -y install openssh-client && \
+    ssh-keygen -q -t rsa -N '' -f /id_rsa && \
+    eval $(ssh-agent) && \
+    chmod 600 /root/.ssh/id_rsa && \
+    chmod 600 /root/.ssh/id_rsa.pub && \
+    sed -i 's/codespaces/agnoster/' /home/node/.zshrc && \
+    sed -i'' -r -e "/prompt_hg/a\  prompt_newline" /home/node/.oh-my-zsh/themes/agnoster.zsh-theme
