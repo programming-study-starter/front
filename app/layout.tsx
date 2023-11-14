@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`w-full h-screen mx-auto`}>
-        <header className="w-[calc(100%)] z-[10] fixed">
+        <header className="w-[calc(100%)] z-[10] fixed t-0">
           <NavbarComponent />
         </header>
-        <div className='container pt-20'>
+        <div className='container relative top-20'>
           {children}
         </div>
       </body>
