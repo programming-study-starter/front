@@ -16,7 +16,7 @@ import {
   TextInput,
   ToggleSwitch,
 } from 'flowbite-react';
-import { HiLink } from 'react-icons/hi';
+import { HiLink, HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser } from 'react-icons/hi';
 
 export default function SettingsAccountPage() {
   const [openModal, setOpenModal] = useState(false);
@@ -43,19 +43,19 @@ export default function SettingsAccountPage() {
               <div className="mb-2 block">
                 <Label htmlFor="current_password" value="Current password"/>
               </div>
-              <TextInput id='current_password' type='password' required />
+              <TextInput icon={HiLockClosed} id='current_password' type='password' required />
             </div>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="new_password" value="New password"/>
               </div>
-              <TextInput id='new_password' type='password' required />
+              <TextInput icon={HiLockClosed} id='new_password' type='password' required />
             </div>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="confirm_new_password" value="Confirm new password"/>
               </div>
-              <TextInput id='confirm_new_password' type='password' required />
+              <TextInput icon={HiLockClosed} id='confirm_new_password' type='password' required />
             </div>
             <div>
               <Button.Group outline>

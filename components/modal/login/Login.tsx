@@ -44,6 +44,11 @@ export default function LoginModal() {
     });
   }
 
+  const goToCreateAccount = () => {
+    setIsOpen(false);
+    router.push('create-account');
+  }
+
   return (
     <Modal show={isOpen} size={'md'} onClose={() => setIsOpen(false)}>
       <form onSubmit={submitLogin}>
@@ -78,7 +83,7 @@ export default function LoginModal() {
               <a href="#" className="text-sm text-cyan-700 hover:underline">
                 Lost Password?
               </a>
-              <a href="#" className="text-sm text-cyan-700 hover:underline">
+              <a className="text-sm text-cyan-700 hover:underline" onClick={() => goToCreateAccount()}>
                 Create account
               </a>
             </div>

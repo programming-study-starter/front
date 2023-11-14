@@ -6,7 +6,6 @@ import { Avatar, Dropdown } from "flowbite-react";
 
 import { useLoginDataSotre, setLoginCookieData } from '@/components/modal/login/LoginStore';
 
-
 export default function ProfileComponent() {
   const router = useRouter();
   const setData = useLoginDataSotre((state) => state.setData);
@@ -15,6 +14,7 @@ export default function ProfileComponent() {
   const fnLogOut = () => {
     setData(undefined);
     setLoginCookieData(undefined);
+    router.push('/');
   }
 
   return (

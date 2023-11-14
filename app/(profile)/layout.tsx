@@ -15,7 +15,7 @@ export default function ProfileLayout({
   const pathname = usePathname();
 
   return (
-    <div className='flex pt-20'>
+    <div className='flex'>
       <div>
         <Sidebar theme={{"root": {"inner": "h-full overflow-y-auto overflow-x-hidden rounded px-3 cursor-pointer"}}}>
           <Sidebar.Items>
@@ -25,31 +25,27 @@ export default function ProfileLayout({
               <Sidebar.Item as={Link} href={`/settings/notifications`} active={pathname == '/settings/notifications'}>Notifications</Sidebar.Item>
             </Sidebar.ItemGroup>
             <Sidebar.ItemGroup>
-              <Sidebar.Collapse 
-                label='My Work'
-                open={true}
-                renderChevronIcon={(theme, open) => {
+              <Sidebar.Collapse open={true} label='My Work'
+                renderChevronIcon={(theme: {label: {icone: {open: string}}}, open: boolean) => {
                   const IconComponent = open ? HiOutlineMinusSm : HiOutlinePlusSm;
                   return <IconComponent aria-hidden className={twMerge(theme.label.icon.open[open ? 'on' : 'off'])} />;
                 }}
               >
-                <Sidebar.Item>Poetry</Sidebar.Item>
-                <Sidebar.Item>Novel</Sidebar.Item>
-                <Sidebar.Item>Comic</Sidebar.Item>
-                <Sidebar.Item>Animation</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-work/poetry`} active={pathname == '/my-work/poetry'}>Poetry</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-work/novel`} active={pathname == '/my-work/novel'}>Novel</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-work/comic`} active={pathname == '/my-work/comic'}>Comic</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-work/animation`} active={pathname == '/my-work/animation'}>Animation</Sidebar.Item>
               </Sidebar.Collapse>
-              <Sidebar.Collapse
-                label='My Favorites'
-                open={true}
-                renderChevronIcon={(theme, open) => {
+              <Sidebar.Collapse open={true} label='My Favorites'
+                renderChevronIcon={(theme, open: boolean) => {
                   const IconComponent = open ? HiOutlineMinusSm : HiOutlinePlusSm;
                   return <IconComponent aria-hidden className={twMerge(theme.label.icon.open[open ? 'on' : 'off'])} />;
                 }}
               >
-                <Sidebar.Item>Poetry</Sidebar.Item>
-                <Sidebar.Item>Novel</Sidebar.Item>
-                <Sidebar.Item>Comic</Sidebar.Item>
-                <Sidebar.Item>Animation</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-favorites/poetry`} active={pathname == '/my-favorites/poetry'} >Poetry</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-favorites/novel`} active={pathname == '/my-favorites/novel'} >Novel</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-favorites/comic`} active={pathname == '/my-favorites/comic'} >Comic</Sidebar.Item>
+                <Sidebar.Item as={Link} href={`/my-favorites/animation`} active={pathname == '/my-favorites/animation'} >Animation</Sidebar.Item>
               </Sidebar.Collapse>
             </Sidebar.ItemGroup>
             <Sidebar.ItemGroup>

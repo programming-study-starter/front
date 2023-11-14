@@ -29,35 +29,33 @@ export default function NavbarComponent() {
   }, []);
 
   return (
-    <div>
-      <header className="w-[calc(100%)] z-[10] fixed">
-        <Navbar fluid rounded border>
-          <Navbar.Brand>
-            <Image src={`/images/logo.png`} alt="logo" width={20} height={20} />
-            <span className="self-center whitespace-nowrap text-xl font-semibold">{`${process.env.NEXT_PUBLIC_APP_TITLE}`}</span>
-          </Navbar.Brand>
-          <div className="flex md:order-2 gap-1">
-            {
-              token ? 
-              <ProfileComponent/>
-              :
-              <Button pill={true} size={`sm`} onClick={() => setIsOpen(true)} className="bg-primary">Login</Button>
-            }
-            <Navbar.Toggle />
-          </div>
-          
-          <Navbar.Collapse>
-            {NavbarList.map((d:NavbarType, idx:number) => {
-              return (
-                <Navbar.Link key={`navbar-${idx}`} onClick={() => {onClickNavbar(d.url)}} className={`cursor-pointer font-bold ${d.url == pathname ? 'text-primary' : 'text-gray-900'}`}>
-                  {d.label}
-                </Navbar.Link>
-              );
-            })}
-          </Navbar.Collapse>
-        </Navbar>
-      </header>
+    <>
+      <Navbar fluid rounded border>
+        <Navbar.Brand>
+          <Image src={`/images/logo.png`} alt="logo" width={20} height={20} />
+          <span className="self-center whitespace-nowrap text-xl font-semibold">{`${process.env.NEXT_PUBLIC_APP_TITLE}`}</span>
+        </Navbar.Brand>
+        <div className="flex md:order-2 gap-1">
+          {
+            token ? 
+            <ProfileComponent/>
+            :
+            <Button pill={true} size={`sm`} onClick={() => setIsOpen(true)} className="bg-primary">Login</Button>
+          }
+          <Navbar.Toggle />
+        </div>
+        
+        <Navbar.Collapse>
+          {NavbarList.map((d:NavbarType, idx:number) => {
+            return (
+              <Navbar.Link key={`navbar-${idx}`} onClick={() => {onClickNavbar(d.url)}} className={`cursor-pointer font-bold ${d.url == pathname ? 'text-primary' : 'text-gray-900'}`}>
+                {d.label}
+              </Navbar.Link>
+            );
+          })}
+        </Navbar.Collapse>
+      </Navbar>
       <LoginModal />
-    </div>
+    </>
   );
 }
