@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`container w-screen h-screen mx-auto`}>
+      <body className={`w-full h-screen mx-auto`}>
         <NavbarComponent />
         {children}
       </body>

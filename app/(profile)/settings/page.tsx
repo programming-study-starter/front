@@ -14,7 +14,7 @@ import {
   TextInput,
   ToggleSwitch,
 } from 'flowbite-react';
-import { HiLink } from 'react-icons/hi';
+import { HiLink, HiMail } from 'react-icons/hi';
 
 export default function SettingsPage() {
   const defaultAvatarImg = '/icons/solid/user/user.svg';
@@ -24,14 +24,14 @@ export default function SettingsPage() {
       <div>
         <p className='font-bold'>Global Profile</p>
       </div>
-      <hr class="h-px my-2 bg-gray-200 border-0" />
+      <hr className="h-px my-2 bg-gray-200 border-0" />
       <div className='flex'>
         <form className="flex flex-col w-4/6 gap-4">
           <div>
             <div className="mb-2 block">
               <Label htmlFor="email" value="Email" />
             </div>
-            <TextInput id="email" type="email" placeholder="name@flowbite.com" readOnly />
+            <TextInput icon={HiMail} id="email" type="email" placeholder="name@flowbite.com" readOnly />
           </div>
           <div>
             <div className="mb-2 block">
@@ -50,6 +50,47 @@ export default function SettingsPage() {
               <Label htmlFor="mobile" value="Phone number" />
             </div>
             <TextInput id="mobile" type="tel" placeholder={`00000000000`} />
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="gender" value="Gender" />
+            </div>
+            <fieldset className='flex max-w-full flex-col gap-4'>
+              <div className='flex items-center gap-2'>
+                <Radio id='gender-man' name='gender' value={`man`} />
+                <Label htmlFor='gender-man'>Man</Label>
+                <Radio id='gender-woman' name='gender' value={`woman`} />
+                <Label htmlFor='gender-woman'>Woman</Label>
+                <Radio id='gender-none' name='gender' value={`none`} />
+                <Label htmlFor='gender-none'>I don&apos;t wnat to tell you</Label>
+              </div>
+            </fieldset>
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="birthday" value="Birthday" />
+            </div>
+            <div className='flex'>
+              <Select>
+                <option>Year</option>
+              </Select>
+              <Select>
+                <option>Month</option>
+              </Select>
+              <Select>
+                <option>Day</option>
+              </Select>
+            </div>
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="address" value="Address" />
+            </div>
+            <div className='flex'>
+              <TextInput type='text' placeholder={`zip code`}/>
+              <TextInput type='text' placeholder={`address`}/>
+              <TextInput type='text' placeholder={`address detail`}/>
+            </div>
           </div>
           <div>
             <div className="mb-2 block">

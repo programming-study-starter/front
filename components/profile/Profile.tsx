@@ -26,7 +26,6 @@ export default function ProfileComponent() {
         </Dropdown.Header>
         <Dropdown.Item>Dashboard</Dropdown.Item>
         <Dropdown.Item onClick={() => router.push('/settings')}>Settings</Dropdown.Item>
-        <Dropdown.Item>Earnings</Dropdown.Item>
         <Dropdown.Divider />
         <Dropdown.Item onClick={() => fnLogOut()}>Sign out</Dropdown.Item>
       </Dropdown>

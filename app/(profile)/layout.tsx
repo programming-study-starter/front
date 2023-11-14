@@ -1,6 +1,7 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { Sidebar } from 'flowbite-react';
 import { HiOutlineMinusSm, HiOutlinePlusSm } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
@@ -10,17 +11,18 @@ export default function ProfileLayout({
 }: {
   children: React.ReactNode
 }) {
+  const router = useRouter();
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
-    <div className='flex'>
+    <div className='flex pt-20'>
       <div>
-        <Sidebar theme={{"root": {"inner": "h-full overflow-y-auto overflow-x-hidden rounded px-3"}}}>
+        <Sidebar theme={{"root": {"inner": "h-full overflow-y-auto overflow-x-hidden rounded px-3 cursor-pointer"}}}>
           <Sidebar.Items>
             <Sidebar.ItemGroup>
-              <Sidebar.Item><span className={`cursor-pointer ${pathname == '/settings' ? 'font-bold' : ''}`}>Public profile</span></Sidebar.Item>
-              <Sidebar.Item><span className={`cursor-pointer ${pathname == '/settings/account' ? 'font-bold' : ''}`}>Account</span></Sidebar.Item>
-              <Sidebar.Item><span className={`cursor-pointer ${pathname == '/settings/notifications' ? 'font-bold' : ''}`}>Notifications</span></Sidebar.Item>
+              <Sidebar.Item as={Link} href={`/settings`} active={pathname == '/settings'}>Public profile</Sidebar.Item>
+              <Sidebar.Item as={Link} href={`/settings/account`} active={pathname == '/settings/account'}>Account</Sidebar.Item>
+              <Sidebar.Item as={Link} href={`/settings/notifications`} active={pathname == '/settings/notifications'}>Notifications</Sidebar.Item>
             </Sidebar.ItemGroup>
             <Sidebar.ItemGroup>
               <Sidebar.Collapse 
@@ -56,7 +58,9 @@ export default function ProfileLayout({
           </Sidebar.Items>
         </Sidebar>
       </div>
-      {children}
+      <main className='container'>
+        {children}
+      </main>
     </div>
   );
 }

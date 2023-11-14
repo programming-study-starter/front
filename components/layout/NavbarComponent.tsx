@@ -30,8 +30,8 @@ export default function NavbarComponent() {
 
   return (
     <div>
-      <header className="w-full z-[1000]">
-        <Navbar fluid rounded>
+      <header className="w-[calc(100%)] z-[10] fixed">
+        <Navbar fluid rounded border>
           <Navbar.Brand>
             <Image src={`/images/logo.png`} alt="logo" width={20} height={20} />
             <span className="self-center whitespace-nowrap text-xl font-semibold">{`${process.env.NEXT_PUBLIC_APP_TITLE}`}</span>
