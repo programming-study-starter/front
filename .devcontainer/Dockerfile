@@ -6,19 +6,19 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm
 # 시간 및 날짜 설정
 ENV TZ Asia/Seoul
 
-RUN rm -rf /root/.ssh && \
-    mkdir -p /root/.ssh && \
-    chmod 700 /root/.ssh
+# RUN rm -rf ~/.ssh && \
+#     mkdir -p ~/.ssh && \
+#     chmod 700 ~/.ssh
 
-COPY .ssh/config /root/.ssh/ 
-COPY .ssh/id_rsa /root/.ssh/ 
-COPY .ssh/id_rsa.pub /root/.ssh/ 
+# COPY .ssh/config ~/.ssh/ 
+# COPY .ssh/id_rsa ~/.ssh/ 
+# COPY .ssh/id_rsa.pub ~/.ssh/ 
 
-RUN apt-get update && \
-    apt-get -y install openssh-client && \
-    ssh-keygen -q -t rsa -N '' -f /id_rsa && \
-    eval $(ssh-agent) && \
-    chmod 600 /root/.ssh/id_rsa && \
-    chmod 600 /root/.ssh/id_rsa.pub && \
-    sed -i 's/codespaces/agnoster/' /home/node/.zshrc && \
-    sed -i'' -r -e "/prompt_hg/a\  prompt_newline" /home/node/.oh-my-zsh/themes/agnoster.zsh-theme
+# RUN apt-get update && \
+#     apt-get -y install openssh-client && \
+#     ssh-keygen -q -t rsa -N '' -f /id_rsa && \
+#     eval $(ssh-agent) && \
+#     chmod 600 ~/.ssh/id_rsa && \
+#     chmod 600 ~/.ssh/id_rsa.pub && \
+#     sed -i 's/codespaces/agnoster/' ~/.zshrc && \
+#     sed -i'' -r -e "/prompt_hg/a\  prompt_newline" ~/.oh-my-zsh/themes/agnoster.zsh-theme
