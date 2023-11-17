@@ -14,8 +14,9 @@ ENV TZ Asia/Seoul
 # COPY .ssh/id_rsa ~/.ssh/ 
 # COPY .ssh/id_rsa.pub ~/.ssh/ 
 
-# RUN apt-get update && \
-#     apt-get -y install openssh-client && \
+RUN apt-get update && \
+    apt-get -y install wget curl openssh-client && \
+    echo "DONE"
 #     ssh-keygen -q -t rsa -N '' -f /id_rsa && \
 #     eval $(ssh-agent) && \
 #     chmod 600 ~/.ssh/id_rsa && \
