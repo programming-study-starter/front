@@ -8,7 +8,7 @@
     "sshd": "latest",
   },
   "forwardPorts": [80, 22, 443],
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "sh .devcontainer/startup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
