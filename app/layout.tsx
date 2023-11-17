@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
+import ReactQueryProvider from '@/components/modules/reactQuery/ReactQueryProvider';
 import NavbarComponent from '@/components/layout/NavbarComponent';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,12 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`w-full h-screen mx-auto`}>
-        <header className="w-[calc(100%)] z-[10] fixed t-0">
-          <NavbarComponent />
-        </header>
-        <div className='container relative top-20'>
-          {children}
-        </div>
+        <ReactQueryProvider>
+          <header className="w-[calc(100%)] z-[10] fixed t-0">
+            <NavbarComponent />
+          </header>
+          <div className='container relative top-20'>
+            {children}
+          </div>
+        </ReactQueryProvider>
       </body>
     </html>
   )
