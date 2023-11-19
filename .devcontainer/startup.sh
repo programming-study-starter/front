@@ -3,5 +3,4 @@ sed -i'' -r -e "/prompt_hg/a\  prompt_newline" ~/.oh-my-zsh/themes/agnoster.zsh-
 cp .devcontainer/.ssh/id_rsa* ~/.ssh/ && \
 echo $(pwd) && \
 npm install && \
-echo DONE && \
-zsh
+echo DONE

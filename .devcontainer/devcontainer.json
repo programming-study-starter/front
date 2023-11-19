@@ -4,6 +4,11 @@
 	"service": "app",
 	"workspaceFolder": "/workspaces/front",
   "features": {
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+      "plugins": "ssh-agent npm",
+      "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+      "username": "node"
+    },
     "git": "latest",
     "sshd": "latest",
   },
