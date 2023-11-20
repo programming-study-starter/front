@@ -10,7 +10,7 @@
       "username": "node"
     },
     "git": "latest",
-    "sshd": "latest",
+    // "sshd": "latest",
   },
   "forwardPorts": [80, 22, 443],
   "postCreateCommand": "sh .devcontainer/startup.sh",
