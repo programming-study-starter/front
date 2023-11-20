@@ -10,6 +10,7 @@ import  { type NavbarType, NavbarList } from '@/components/layout/NavbarData';
 
 import ProfileComponent from '@/components/profile/Profile';
 import LoginModal from '@/components/modal/login/Login';
+
 import { useLoginModalStore, useLoginDataSotre, getLoginCookieData, type LoginDataType } from '@/components/modal/login/LoginStore';
 
 export default function NavbarComponent() {
@@ -40,7 +41,7 @@ export default function NavbarComponent() {
             token ? 
             <ProfileComponent/>
             :
-            <Button pill={true} size={`sm`} onClick={() => setIsOpen(true)} className="bg-primary">Login</Button>
+            <Button pill={true} size={`sm`} onClick={() => setIsOpen(true)} color="primary">Login</Button>
           }
           <Navbar.Toggle />
         </div>

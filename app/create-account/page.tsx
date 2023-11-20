@@ -1,9 +1,12 @@
 'use client';
 
+import { useState, ChangeEvent } from 'react';
+
 import {
   Avatar,
   Button,
   Checkbox,
+  Datepicker,
   Dropdown,
   FileInput,
   Label,
@@ -17,6 +20,7 @@ import {
 import { HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser } from 'react-icons/hi';
 
 export default function CreateAccountPage() {
+
   return (
     <div className='w-full'>
       <div>
@@ -37,23 +41,19 @@ export default function CreateAccountPage() {
             </div>
             <TextInput icon={HiLockClosed} id="password" type="password" placeholder="********" required />
           </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="name" value="Name" />
+          <div className='flex flex-row gap-2'>
+            <div className='w-full'>
+              <div className="mb-2 block">
+                <Label htmlFor="name" value="Name" />
+              </div>
+              <TextInput icon={HiUser} id="name" type="text" placeholder={`creator`} />
             </div>
-            <TextInput icon={HiUser} id="name" type="text" placeholder={`creator`} />
-          </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="nickname" value="Nickname" />
+            <div className='w-full'>
+              <div className="mb-2 block">
+                <Label htmlFor="nickname" value="Nickname" />
+              </div>
+              <TextInput icon={HiUser} id="nickname" type="text" placeholder={`creator`} />
             </div>
-            <TextInput icon={HiUser} id="nickname" type="text" placeholder={`creator`} />
-          </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="mobile" value="Phone number" />
-            </div>
-            <TextInput icon={HiPhone} id="mobile" type="tel" placeholder={`00000000000`} />
           </div>
           <div>
             <div className="mb-2 block">
@@ -70,20 +70,18 @@ export default function CreateAccountPage() {
               </div>
             </fieldset>
           </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="birthday" value="Birthday" />
+          <div className='flex flex-row gap-2'>
+            <div className='w-full'>
+              <div className="mb-2 block">
+                <Label htmlFor="mobile" value="Phone number" />
+              </div>
+              <TextInput icon={HiPhone} id="mobile" type="tel" placeholder={`00000000000`} />
             </div>
-            <div className='flex'>
-              <Select>
-                <option>Year</option>
-              </Select>
-              <Select>
-                <option>Month</option>
-              </Select>
-              <Select>
-                <option>Day</option>
-              </Select>
+            <div className='w-full'>
+              <div className="mb-2 block">
+                <Label htmlFor="birthday" value="Birthday" />
+              </div>
+              <Datepicker maxDate={new Date()} />
             </div>
           </div>
           <div>

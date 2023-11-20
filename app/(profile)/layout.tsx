@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { Sidebar } from 'flowbite-react';
 import { HiOutlineMinusSm, HiOutlinePlusSm } from 'react-icons/hi';
-import { twMerge } from 'tailwind-merge';
 
 export default function ProfileLayout({
   children,
@@ -26,9 +25,9 @@ export default function ProfileLayout({
             </Sidebar.ItemGroup>
             <Sidebar.ItemGroup>
               <Sidebar.Collapse open={true} label='My Work'
-                renderChevronIcon={(theme: {label: {icone: {open: string}}}, open: boolean) => {
+                renderChevronIcon={(theme, open) => {
                   const IconComponent = open ? HiOutlineMinusSm : HiOutlinePlusSm;
-                  return <IconComponent aria-hidden className={twMerge(theme.label.icon.open[open ? 'on' : 'off'])} />;
+                  return <IconComponent aria-hidden />;
                 }}
               >
                 <Sidebar.Item as={Link} href={`/my-work/poetry`} active={pathname == '/my-work/poetry'}>Poetry</Sidebar.Item>
@@ -37,9 +36,9 @@ export default function ProfileLayout({
                 <Sidebar.Item as={Link} href={`/my-work/animation`} active={pathname == '/my-work/animation'}>Animation</Sidebar.Item>
               </Sidebar.Collapse>
               <Sidebar.Collapse open={true} label='My Favorites'
-                renderChevronIcon={(theme, open: boolean) => {
+                renderChevronIcon={(theme, open) => {
                   const IconComponent = open ? HiOutlineMinusSm : HiOutlinePlusSm;
-                  return <IconComponent aria-hidden className={twMerge(theme.label.icon.open[open ? 'on' : 'off'])} />;
+                  return <IconComponent aria-hidden />;
                 }}
               >
                 <Sidebar.Item as={Link} href={`/my-favorites/poetry`} active={pathname == '/my-favorites/poetry'} >Poetry</Sidebar.Item>

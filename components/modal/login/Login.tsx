@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { setCookie } from 'cookies-next';
-import axios from '@/components/modules/axios';
+import axios from '@/components/modules/Axios';
 import { useRouter, usePathname } from 'next/navigation';
 import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { HiMail, HiLockClosed } from 'react-icons/hi';
@@ -60,24 +60,24 @@ export default function LoginModal() {
                 <Label htmlFor="email" value="Your email" />
               </div>
               <TextInput id="email"
-                         type='email'
-                         placeholder="hong@email.com"
-                         icon={HiMail}
-                         value={email}
-                         onChange={(event) => setEmail(event.target.value)}
-                         required />
+                        type='email'
+                        placeholder="hong@email.com"
+                        icon={HiMail}
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        required />
             </div>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="password" value="Your password" />
               </div>
               <TextInput id="password" 
-                         type="password" 
-                         placeholder='*********'
-                         value={password}
-                         icon={HiLockClosed}
-                         onChange={(event) => setPassword(event.target.value)}
-                         required />
+                        type="password" 
+                        placeholder='*********'
+                        value={password}
+                        icon={HiLockClosed}
+                        onChange={(event) => setPassword(event.target.value)}
+                        required />
             </div>
             <div className="flex justify-between">
               <a href="#" className="text-sm text-cyan-700 hover:underline">
@@ -88,7 +88,7 @@ export default function LoginModal() {
               </a>
             </div>
             <div className="w-full">
-              <Button type='submit' pill={true} size={`sm`} className="bg-primary w-full">Login</Button>
+              <Button type='submit' pill={true} size={`sm`} color="primary" className='w-full'>Login</Button>
             </div>
           </div>
         </Modal.Body>
