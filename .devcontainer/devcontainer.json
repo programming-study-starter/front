@@ -5,12 +5,11 @@
 	"workspaceFolder": "/workspaces/front",
   "features": {
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-      "plugins": "ssh-agent npm",
+      "plugins": "",
       "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
       "username": "node"
     },
-    "git": "latest",
-    // "sshd": "latest",
+		"github-cli": "latest"
   },
   "forwardPorts": [80, 22, 443],
   "postCreateCommand": "sh .devcontainer/startup.sh",
@@ -45,7 +44,5 @@
       },
     }
   },
-  // "remoteUser": "vscode",
-  // "remoteUser": "root",
   "remoteUser": "node",
 }

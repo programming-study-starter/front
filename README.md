@@ -36,12 +36,10 @@
 - Dev Conatiner 를 실행하기 전에 아래 명령어를 실행하세요
 
 ```bash
+ssh-add $HOME/.ssh/{사용자가 github 에 등록한 ssh rsa key}
 # 예제
-pwd
-/home/wslUbuntu/workspace/front
-
-cp ~/.ssh/id_rsa ./.devcontainer/.ssh/
-cp ~/.ssh/id_rsa.pub ./.devcontainer/.ssh/
+ssh-add $HOME/.ssh/id_rsa
+ssh-add $HOME/.ssh/github_rsa
 ```
 
 ## How to run
