@@ -163,7 +163,7 @@ export default function CustomDatepicker({
 
   const onClickDay = (day:string | undefined) => {
     setInputDate(day);
-    onChange(new Date(day));
+    onChange(day ? new Date(day) : undefined);
     setOpen(false);
   }
 
@@ -189,7 +189,7 @@ export default function CustomDatepicker({
           {drawArea()}
         </Modal.Body>
         <Modal.Footer>
-          <div className=' w-full flex flex-row gap-2 items-center place-content-center'>
+          <div className='w-full flex flex-row gap-2 items-center place-content-center'>
             <Button size={`sm`} className='w-1/2' color={`primary`} onClick={() => {onClickDay(getDateYyyyMMdd());}}>Today</Button>
             <Button size={`sm`} className='w-1/2' color={`gray`} onClick={() => {onClickDay()}}>Clear</Button>
           </div>

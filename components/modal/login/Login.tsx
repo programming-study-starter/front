@@ -79,16 +79,16 @@ export default function LoginModal() {
                         onChange={(event) => setPassword(event.target.value)}
                         required />
             </div>
-            <div className="flex justify-between">
-              <a href="#" className="text-sm text-cyan-700 hover:underline">
+            <div className="flex justify-between cursor-pointer">
+              <a href="#" className="text-sm text-gray-900 hover:text-primary-700 hover:underline">
                 Lost Password?
               </a>
-              <a className="text-sm text-cyan-700 hover:underline" onClick={() => goToCreateAccount()}>
+              <a className="text-sm text-gray-900 hover:text-primary-700 hover:underline" onClick={() => goToCreateAccount()}>
                 Create account
               </a>
             </div>
             <div className="w-full">
-              <Button type='submit' pill={true} size={`sm`} color="primary" className='w-full'>Login</Button>
+              <Button type='submit' pill={true} size={`sm`} color="primary" fullSized={true}>Login</Button>
             </div>
           </div>
         </Modal.Body>

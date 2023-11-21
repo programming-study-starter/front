@@ -9,6 +9,7 @@ import {
   Datepicker,
   Dropdown,
   FileInput,
+  Footer,
   Label,
   Radio,
   RangeSlider,
@@ -42,6 +43,12 @@ export default function CreateAccountPage() {
               <Label htmlFor="password" value="Password" />
             </div>
             <TextInput icon={HiLockClosed} id="password" type="password" placeholder="********" required />
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="confirm_password" value="Confirm password" />
+            </div>
+            <TextInput icon={HiLockClosed} id="confirm_password" type="password" placeholder="********" required />
           </div>
           <div className='flex flex-row gap-2'>
             <div className='w-full'>
@@ -90,15 +97,17 @@ export default function CreateAccountPage() {
             <div className="mb-2 block">
               <Label htmlFor="address" value="Address" />
             </div>
-            <div className='flex flex-row gap-2'>
-              <TextInput icon={HiLocationMarker} type='text' placeholder={`zip code`}/>
-              <TextInput type='text' placeholder={`address`}/>
-              <TextInput type='text' placeholder={`address detail`}/>
+            <div className='w-full flex flex-row gap-2'>
+              <TextInput icon={HiLocationMarker} type='text' className='w-2/6' placeholder={`zip code`}/>
+              <TextInput type='text' className='w-4/6' placeholder={`address`}/>
+              <TextInput type='text' className='w-4/6' placeholder={`address detail`}/>
             </div>
           </div>
           <div>
-            <Button type={`button`} onClick={() => console.log(date)}>Button</Button>
-            <Button type={`button`} onClick={() => console.log(date)}>Button</Button>
+            <div className='w-full mt-2 flex flex-row gap-2 items-center place-content-center'>
+              <Button type={`button`} color={`primary`} className='w-1/2' onClick={() => console.log(date)}>Button</Button>
+              <Button type={`button`} color={`gray`} className='w-1/2' onClick={() => console.log(date)}>Button</Button>
+            </div>
           </div>
         </form>
       </div>
