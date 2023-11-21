@@ -16,7 +16,7 @@ export default function ProfileLayout({
   return (
     <div className='flex'>
       <div>
-        <Sidebar theme={{"root": {"inner": "h-full overflow-y-auto overflow-x-hidden rounded px-3 cursor-pointer"}}}>
+        <Sidebar>
           <Sidebar.Items>
             <Sidebar.ItemGroup>
               <Sidebar.Item as={Link} href={`/settings`} active={pathname == '/settings'}>Public profile</Sidebar.Item>

@@ -12,14 +12,16 @@ import {
   Label,
   Radio,
   RangeSlider,
-  Select,
   Textarea,
   TextInput,
   ToggleSwitch,
 } from 'flowbite-react';
-import { HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser } from 'react-icons/hi';
+import { HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser, HiCalendar } from 'react-icons/hi';
+
+import CustomDatepicker from '@/components/datepicker/CustomDatepicker';
 
 export default function CreateAccountPage() {
+  const [date, setDate] = useState();
 
   return (
     <div className='w-full'>
@@ -81,7 +83,7 @@ export default function CreateAccountPage() {
               <div className="mb-2 block">
                 <Label htmlFor="birthday" value="Birthday" />
               </div>
-              <Datepicker maxDate={new Date()} />
+              <CustomDatepicker onChange={(d:date) => { setDate(d); }}></CustomDatepicker>
             </div>
           </div>
           <div>
@@ -93,6 +95,10 @@ export default function CreateAccountPage() {
               <TextInput type='text' placeholder={`address`}/>
               <TextInput type='text' placeholder={`address detail`}/>
             </div>
+          </div>
+          <div>
+            <Button type={`button`} onClick={() => console.log(date)}>Button</Button>
+            <Button type={`button`} onClick={() => console.log(date)}>Button</Button>
           </div>
         </form>
       </div>
