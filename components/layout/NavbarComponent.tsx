@@ -26,6 +26,7 @@ export default function NavbarComponent() {
   }
 
   useEffect(() => {
+    console.log(cookieData.token);
     if (cookieData.token) setData(cookieData);
   }, []);
 
