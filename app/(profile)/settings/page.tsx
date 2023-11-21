@@ -16,6 +16,8 @@ import {
 } from 'flowbite-react';
 import { HiLink, HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser } from 'react-icons/hi';
 
+import CustomDatepicker from '@/components/datepicker/CustomDatepicker';
+
 export default function SettingsPage() {
   const defaultAvatarImg = '/icons/solid/user/user.svg';
 
@@ -70,17 +72,7 @@ export default function SettingsPage() {
             <div className="mb-2 block">
               <Label htmlFor="birthday" value="Birthday" />
             </div>
-            <div className='flex'>
-              <Select>
-                <option>Year</option>
-              </Select>
-              <Select>
-                <option>Month</option>
-              </Select>
-              <Select>
-                <option>Day</option>
-              </Select>
-            </div>
+            <CustomDatepicker onChange={(d:date) => { console.log(d); }} maxDate={new Date()}></CustomDatepicker>
           </div>
           <div>
             <div className="mb-2 block">
