@@ -90,7 +90,7 @@ export default function CreateAccountPage() {
               <div className="mb-2 block">
                 <Label htmlFor="birthday" value="Birthday" />
               </div>
-              <CustomDatepicker onChange={(d:date) => { setDate(d); }}></CustomDatepicker>
+              <CustomDatepicker onChange={(d:date) => { setDate(d); }} maxDate={new Date()}></CustomDatepicker>
             </div>
           </div>
           <div>
