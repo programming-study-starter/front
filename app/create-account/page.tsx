@@ -25,7 +25,7 @@ export default function CreateAccountPage() {
   const [date, setDate] = useState();
 
   return (
-    <div className='w-full'>
+    <div className='w-full px-2'>
       <div>
         <p className='font-bold'>Global Profile</p>
       </div>
