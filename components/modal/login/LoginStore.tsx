@@ -34,7 +34,7 @@ interface LoginDataStoreType extends LoginDataType {
   setData: (param: LoginDataType | undefined) => void,
 }
 
-const useLoginDataSotre = create<LoginDataStoreType>()(
+const useLoginDataStore = create<LoginDataStoreType>()(
   (set) => ({
     token: undefined,
     email: undefined,
@@ -106,7 +106,7 @@ const setLoginCookieData = (param: LoginDataType | undefined) => {
 
 export {
   useLoginModalStore,
-  useLoginDataSotre,
+  useLoginDataStore,
   getLoginCookieData,
   setLoginCookieData,
   type LoginDataType,

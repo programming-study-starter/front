@@ -1,14 +1,16 @@
 'use client';
 
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getCookie } from "cookies-next";
 import { Avatar, Dropdown } from "flowbite-react";
 
-import { useLoginDataSotre, setLoginCookieData } from '@/components/modal/login/LoginStore';
+import { useLoginDataStore, setLoginCookieData } from '@/components/modal/login/LoginStore';
+import UserAlert from "@/components/profile/UserAlert";
 
 export default function ProfileComponent() {
   const router = useRouter();
-  const setData = useLoginDataSotre((state) => state.setData);
+  const setData = useLoginDataStore((state) => state.setData);
   const defaultAvatarImg = '/icons/solid/user/user.svg';
 
   const onClickLogOut = () => {
@@ -18,12 +20,11 @@ export default function ProfileComponent() {
   }
 
   const onClickBell = () => {
-
   }
-
 
   return (
     <div className="pr-2 flex flex-row gap-4">
+      <UserAlert/>
       <Dropdown arrowIcon={false} inline label={ <Avatar className={`cursor-pointer`} img={`/icons/outline/general/bell.svg`} alt={`user`} size={`sm`} rounded bordered /> }>
         <Dropdown.Header>New messages</Dropdown.Header>
         <Dropdown.Item>Test1</Dropdown.Item>

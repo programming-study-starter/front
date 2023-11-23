@@ -7,7 +7,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { HiMail, HiLockClosed } from 'react-icons/hi';
 
-import { useLoginModalStore, useLoginDataSotre, setLoginCookieData, type LoginDataType } from '@/components/modal/login/LoginStore';
+import { useLoginModalStore, useLoginDataStore, setLoginCookieData, type LoginDataType } from '@/components/modal/login/LoginStore';
 
 export default function LoginModal() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function LoginModal() {
 
   const isOpen = useLoginModalStore((state) => state.isOpen);
   const setIsOpen = useLoginModalStore((state) => state.setIsOpen);
-  const setData = useLoginDataSotre((state) => state.setData);
+  const setData = useLoginDataStore((state) => state.setData);
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

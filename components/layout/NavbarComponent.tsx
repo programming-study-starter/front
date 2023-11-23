@@ -11,22 +11,21 @@ import  { type NavbarType, NavbarList } from '@/components/layout/NavbarData';
 import ProfileComponent from '@/components/profile/Profile';
 import LoginModal from '@/components/modal/login/Login';
 
-import { useLoginModalStore, useLoginDataSotre, getLoginCookieData, type LoginDataType } from '@/components/modal/login/LoginStore';
+import { useLoginModalStore, useLoginDataStore, getLoginCookieData, type LoginDataType } from '@/components/modal/login/LoginStore';
 
 export default function NavbarComponent() {
   const router = useRouter();
   const pathname = usePathname();
   const setIsOpen = useLoginModalStore((state) => state.setIsOpen);
   const cookieData:LoginDataType = getLoginCookieData();
-  const token = useLoginDataSotre((state) => state.token);
-  const setData = useLoginDataSotre((state) => state.setData);
+  const token = useLoginDataStore((state) => state.token);
+  const setData = useLoginDataStore((state) => state.setData);
 
   const onClickNavbar = (url:string) => {
     router.push(url);
   }
 
   useEffect(() => {
-    console.log(cookieData.token);
     if (cookieData.token) setData(cookieData);
   }, []);
 
