@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-import { redis } from '@/components/redis/RedisStore';
 import Theme from '@/components/layout/Theme';
 import ReactQueryProvider from '@/components/modules/reactQuery/ReactQueryProvider';
 import NavbarComponent from '@/components/layout/NavbarComponent';
@@ -16,13 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  redis.subscribe("alert-notice", (err, count) => {
-    if (err) {
-      console.error("Failed to subscribe: %s", err.message);
-    } else {
-      console.log(`Subscribed successfully! This client is currently subscribed to ${count} channels.`);
-    }
-  });
 
   return (
     <html lang="en">
