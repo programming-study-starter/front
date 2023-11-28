@@ -38,8 +38,6 @@ const postApi = async (url:string, body:BodyParamsType, options:any=defaultOptio
     options.headers['Authorization'] = `Bearer ${getCookie('token')}`;
   }
   options.body = JSON.stringify(body);
-  console.log(body);
-
   const res = await fetch(url, options);
   return res.json();
 }
@@ -50,8 +48,6 @@ const patchApi = async (url:string, body:BodyParamsType, options:any=defaultOpti
     options.headers['Authorization'] = `Bearer ${getCookie('token')}`;
   }
   options.body = JSON.stringify(body);
-  console.log(body);
-
   const res = await fetch(url, options);
   return res.json();
 }
@@ -62,8 +58,6 @@ const putApi = async (url:string, body:BodyParamsType, options:any=defaultOption
     options.headers['Authorization'] = `Bearer ${getCookie('token')}`;
   }
   options.body = JSON.stringify(body);
-  console.log(body);
-
   const res = await fetch(url, options);
   return res.json();
 }

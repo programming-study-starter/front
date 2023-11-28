@@ -1,25 +1,26 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { setCookie } from 'cookies-next';
 
+import { Button, Label, Modal, TextInput } from 'flowbite-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { HiLockClosed, HiMail } from 'react-icons/hi';
+
+import { setLoginCookieData, useLoginDataStore, useLoginModalStore, type LoginDataType } from '@/components/modal/login/LoginStore';
 import { postApi } from '@/components/modules/Fetch';
-import { useRouter, usePathname } from 'next/navigation';
-import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
-import { HiMail, HiLockClosed } from 'react-icons/hi';
-
-import { useLoginModalStore, useLoginDataStore, setLoginCookieData, type LoginDataType } from '@/components/modal/login/LoginStore';
+import { onlyNotLoginUserPage } from '@/components/utils/PathnameUtil';
 
 export default function LoginModal() {
   const router = useRouter();
   const pathname = usePathname();
 
   const isOpen = useLoginModalStore((state) => state.isOpen);
+  const email = useLoginModalStore((state) => state.email);
+  const password = useLoginModalStore((state) => state.password);
+  const setEmail = useLoginModalStore((state) => state.setEmail);
+  const setPassword = useLoginModalStore((state) => state.setPassword);
   const setIsOpen = useLoginModalStore((state) => state.setIsOpen);
   const setData = useLoginDataStore((state) => state.setData);
-  
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   const submitLogin = (e:FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,6 +41,9 @@ export default function LoginModal() {
       setData(loginResult);
       setLoginCookieData(loginResult);
       setIsOpen(false);
+      if ( onlyNotLoginUserPage.includes(pathname) ) {
+        router.replace('/');
+      }
     });
   }
 
@@ -62,7 +66,7 @@ export default function LoginModal() {
                         type='email'
                         placeholder="hong@email.com"
                         icon={HiMail}
-                        value={email}
+                        defaultValue={email}
                         onChange={(event) => setEmail(event.target.value)}
                         required />
             </div>
@@ -73,7 +77,7 @@ export default function LoginModal() {
               <TextInput id="password" 
                         type="password" 
                         placeholder='*********'
-                        value={password}
+                        defaultValue={password}
                         icon={HiLockClosed}
                         onChange={(event) => setPassword(event.target.value)}
                         required />

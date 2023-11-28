@@ -3,15 +3,31 @@ import { deleteCookie, getCookie, setCookie } from "cookies-next";
 
 interface LoginModalType {
   isOpen: boolean,
+  email: string,
+  password: string,
   setIsOpen: (isOpen: boolean) => void
+  setEmail: (email: string) => void
+  setPassword: (password: string) => void
 }
 
 const useLoginModalStore = create<LoginModalType>()(
   (set) => ({
     isOpen: false,
+    email: '',
+    password: '',
     setIsOpen: (isOpen: boolean) => {
       set((state) => ({
         isOpen: isOpen
+      }));
+    },
+    setEmail: (email: string) => {
+      set((state) => ({
+        email: email
+      }));
+    },
+    setPassword: (password: string) => {
+      set((state) => ({
+        password: password
       }));
     },
   })

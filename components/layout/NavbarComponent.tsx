@@ -17,12 +17,20 @@ export default function NavbarComponent() {
   const router = useRouter();
   const pathname = usePathname();
   const setIsOpen = useLoginModalStore((state) => state.setIsOpen);
+  const setEmail = useLoginModalStore((state) => state.setEmail);
+  const setPassword = useLoginModalStore((state) => state.setPassword);
   const cookieData:LoginDataType = getLoginCookieData();
   const token = useLoginDataStore((state) => state.token);
   const setData = useLoginDataStore((state) => state.setData);
 
   const onClickNavbar = (url:string) => {
     router.push(url);
+  }
+
+  const onClickLogin = () => {
+    setIsOpen(true);
+    setEmail('');
+    setPassword('');
   }
 
   useEffect(() => {
@@ -41,7 +49,7 @@ export default function NavbarComponent() {
             token ? 
             <ProfileComponent/>
             :
-            <Button pill={true} size={`sm`} onClick={() => setIsOpen(true)} color="primary">Login</Button>
+            <Button pill={true} size={`sm`} onClick={() => onClickLogin()} color="primary">Login</Button>
           }
           <Navbar.Toggle />
         </div>

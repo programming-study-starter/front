@@ -1,23 +1,14 @@
 'use client';
 
-import { useState, ChangeEvent } from 'react';
+import { useState } from 'react';
 
 import {
-  Avatar,
   Button,
-  Checkbox,
-  Datepicker,
-  Dropdown,
-  FileInput,
-  Footer,
   Label,
   Radio,
-  RangeSlider,
-  Textarea,
   TextInput,
-  ToggleSwitch,
 } from 'flowbite-react';
-import { HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser, HiCalendar } from 'react-icons/hi';
+import { HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser } from 'react-icons/hi';
 
 import CustomDatepicker from '@/components/datepicker/CustomDatepicker';
 
