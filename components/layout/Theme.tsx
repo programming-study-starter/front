@@ -79,7 +79,7 @@ const alertTheme: FlowbiteAlertTheme = {
     "base": "-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:ring-2",
     "icon": "w-5 h-5",
     "color": {
-      "info": "bg-cyan-100 text-cyan-500 hover:bg-cyan-200 focus:ring-cyan-400 dark:bg-cyan-200 dark:text-cyan-600 dark:hover:bg-cyan-300",
+      "info": "bg-primary-100 text-primary-500 hover:bg-primary-200 focus:ring-primary-400 dark:bg-primary-200 dark:text-primary-600 dark:hover:bg-primary-300",
       "gray": "bg-gray-100 text-gray-500 hover:bg-gray-200 focus:ring-gray-400 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white",
       "failure": "bg-red-100 text-red-500 hover:bg-red-200 focus:ring-red-400 dark:bg-red-200 dark:text-red-600 dark:hover:bg-red-300",
       "success": "bg-green-100 text-green-500 hover:bg-green-200 focus:ring-green-400 dark:bg-green-200 dark:text-green-600 dark:hover:bg-green-300",
@@ -99,7 +99,7 @@ const alertTheme: FlowbiteAlertTheme = {
     }
   },
   "color": {
-    "info": "text-cyan-700 bg-cyan-100 border-cyan-500 dark:bg-cyan-200 dark:text-cyan-800",
+    "info": "text-gray-700 bg-primary-100 border-primary-500 dark:bg-primary-200 dark:text-primary-800",
     "gray": "text-gray-700 bg-gray-100 border-gray-500 dark:bg-gray-700 dark:text-gray-300",
     "failure": "text-red-700 bg-red-100 border-red-500 dark:bg-red-200 dark:text-red-800",
     "success": "text-green-700 bg-green-100 border-green-500 dark:bg-green-200 dark:text-green-800",
@@ -130,7 +130,7 @@ const avatarTheme: FlowbiteAvatarTheme = {
       "dark": "ring-gray-800 dark:ring-gray-800",
       "failure": "ring-red-500 dark:ring-red-700",
       "gray": "ring-gray-500 dark:ring-gray-400",
-      "info": "ring-cyan-400 dark:ring-cyan-800",
+      "info": "ring-primary-400 dark:ring-primary-800",
       "light": "ring-gray-300 dark:ring-gray-500",
       "purple": "ring-purple-500 dark:ring-purple-600",
       "success": "ring-green-500 dark:ring-green-500",
@@ -185,7 +185,7 @@ const badgeTheme: FlowbiteBadgeTheme = {
   "root": {
     "base": "flex h-fit items-center gap-1 font-semibold",
     "color": {
-      "info": "bg-cyan-100 text-cyan-800 dark:bg-cyan-200 dark:text-cyan-800 group-hover:bg-cyan-200 dark:group-hover:bg-cyan-300",
+      "info": "bg-primary-100 text-primary-800 dark:bg-primary-200 dark:text-primary-800 group-hover:bg-primary-200 dark:group-hover:bg-primary-300",
       "gray": "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 group-hover:bg-gray-200 dark:group-hover:bg-gray-600",
       "failure": "bg-red-100 text-red-800 dark:bg-red-200 dark:text-red-900 group-hover:bg-red-200 dark:group-hover:bg-red-300",
       "success": "bg-green-100 text-green-800 dark:bg-green-200 dark:text-green-900 group-hover:bg-green-200 dark:group-hover:bg-green-300",
@@ -246,9 +246,9 @@ const buttonTheme: FlowbiteButtonTheme = {
     "none": 'text-gray-900 border border-white enabled:hover:bg-gray-100',
     "dark": "text-white bg-gray-800 border border-transparent enabled:hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 dark:bg-gray-800 dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700",
     "failure": "text-white bg-red-700 border border-transparent enabled:hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:enabled:hover:bg-red-700 dark:focus:ring-red-900",
-    "gray": "text-gray-900 bg-white border border-gray-200 enabled:hover:bg-gray-100 enabled:hover:text-cyan-700 :ring-cyan-700 focus:text-cyan-700 dark:bg-transparent dark:text-gray-400 dark:border-gray-600 dark:enabled:hover:text-white dark:enabled:hover:bg-gray-700 focus:ring-2",
-    "info": "text-white bg-cyan-700 border border-transparent enabled:hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800",
-    "light": "text-gray-900 bg-white border border-gray-300 enabled:hover:bg-gray-100 focus:ring-4 focus:ring-cyan-300 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700",
+    "gray": "text-gray-900 bg-white border border-gray-200 enabled:hover:bg-gray-100 enabled:hover:text-primary-700 :ring-primary-700 focus:text-primary-700 dark:bg-transparent dark:text-gray-400 dark:border-gray-600 dark:enabled:hover:text-white dark:enabled:hover:bg-gray-700 focus:ring-2",
+    "info": "text-white bg-primary-700 border border-transparent enabled:hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:enabled:hover:bg-primary-700 dark:focus:ring-primary-800",
+    "light": "text-gray-900 bg-white border border-gray-300 enabled:hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700",
     "purple": "text-white bg-purple-700 border border-transparent enabled:hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:enabled:hover:bg-purple-700 dark:focus:ring-purple-900",
     "success": "text-white bg-green-700 border border-transparent enabled:hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:enabled:hover:bg-green-700 dark:focus:ring-green-800",
     "warning": "text-white bg-yellow-400 border border-transparent enabled:hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-900",
@@ -275,7 +275,7 @@ const buttonTheme: FlowbiteButtonTheme = {
   "gradient": {
     "cyan": "text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800",
     "failure": "text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800",
-    "info": "text-white bg-gradient-to-r from-cyan-500 via-cyan-600 to-cyan-700 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 ",
+    "info": "text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-800 ",
     "lime": "text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-800",
     "pink": "text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-pink-300 dark:focus:ring-pink-800",
     "purple": "text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 enabled:hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800",
@@ -308,7 +308,7 @@ const buttonTheme: FlowbiteButtonTheme = {
       "xl": "pl-20",
     }
   },
-  "label": "ml-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-cyan-200 text-xs font-semibold text-cyan-800",
+  "label": "ml-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary-200 text-xs font-semibold text-primary-800",
   "outline": {
     "color": {
       "gray": "border border-gray-900 dark:border-white",
@@ -441,8 +441,8 @@ const listGroupTheme: FlowbiteListGroupTheme = {
     "link": {
       "base": "flex items-center w-full border-b border-gray-200 py-2 px-4 dark:border-gray-600",
       "active": {
-        "off": "hover:bg-gray-100 hover:text-cyan-700 focus:text-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-gray-500",
-        "on": "bg-cyan-700 text-white dark:bg-gray-800",
+        "off": "hover:bg-gray-100 hover:text-primary-700 focus:text-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-gray-500",
+        "on": "bg-primary-700 text-white dark:bg-gray-800",
       },
       "disabled": {
         "off": "",
@@ -542,8 +542,8 @@ const navbarTheme: FlowbiteNavbarTheme = {
   "link": {
     "base": "block py-2 pr-4 pl-3 md:p-0",
     "active": {
-      "on": "bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700",
-      "off": "border-b border-gray-100  text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white",
+      "on": "bg-primary-700 text-white dark:text-white md:bg-transparent md:text-primary-700",
+      "off": "border-b border-gray-100 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-primary-400 md:dark:hover:bg-transparent md:dark:hover:text-white",
     },
     "disabled": {
       "on": "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
@@ -590,7 +590,7 @@ const paginationTheme: FlowbitePaginationTheme = {
     },
     "selector": {
       "base": "w-12 border border-gray-300 bg-white py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
-      "active": "bg-cyan-50 text-cyan-600 hover:bg-cyan-100 hover:text-cyan-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
+      "active": "bg-primary-50 text-primary-600 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
       "disabled": "opacity-50 cursor-normal",
     },
   },
@@ -676,7 +676,7 @@ const sidebarTheme: FlowbiteSidebarTheme = {
 const progressTheme: FlowbiteProgressTheme = {
   "base": "w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700",
   "label": "mb-1 flex justify-between font-medium dark:text-white",
-  "bar": "rounded-full text-center font-medium leading-none text-cyan-300 dark:text-cyan-100 space-x-2",
+  "bar": "rounded-full text-center font-medium leading-none text-primary-300 dark:text-primary-100 space-x-2",
   "color": {
     "dark": "bg-gray-600 dark:bg-gray-300",
     "blue": "bg-blue-600",
@@ -703,7 +703,7 @@ const spinnerTheme: FlowbiteSpinnerTheme = {
   "color": {
     "failure": "fill-red-600",
     "gray": "fill-gray-600",
-    "info": "fill-cyan-600",
+    "info": "fill-primary-600",
     "pink": "fill-pink-600",
     "purple": "fill-purple-600",
     "success": "fill-green-500",
@@ -754,26 +754,26 @@ const tabsTheme: FlowbiteTabsTheme = {
       "fullWidth": "w-full text-sm font-medium divide-x divide-gray-200 shadow grid grid-flow-col dark:divide-gray-700 dark:text-gray-400 rounded-none",
     },
     "tabitem": {
-      "base": "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500 focus:ring-4 focus:ring-cyan-300 focus:outline-none",
+      "base": "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500 focus:ring-4 focus:ring-primary-300 focus:outline-none",
       "styles": {
         "default": {
           "base": "rounded-t-lg",
           "active": {
-            "on": "bg-gray-100 text-cyan-600 dark:bg-gray-800 dark:text-cyan-500",
+            "on": "bg-gray-100 text-primary-600 dark:bg-gray-800 dark:text-primary-500",
             "off": "text-gray-500 hover:bg-gray-50 hover:text-gray-600 dark:text-gray-400 dark:hover:bg-gray-800  dark:hover:text-gray-300",
           },
         },
         "underline": {
           "base": "rounded-t-lg",
           "active": {
-            "on": "text-cyan-600 rounded-t-lg border-b-2 border-cyan-600 active dark:text-cyan-500 dark:border-cyan-500",
+            "on": "text-primary-600 rounded-t-lg border-b-2 border-primary-600 active dark:text-primary-500 dark:border-primary-500",
             "off": "border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300",
           },
         },
         "pills": {
           "base": "",
           "active": {
-            "on": "rounded-lg bg-cyan-600 text-white",
+            "on": "rounded-lg bg-primary-600 text-white",
             "off": "rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white",
           },
         },
@@ -871,7 +871,7 @@ const checkboxTheme: FlowbiteCheckboxTheme = {
       'dark': 'focus:ring-gray-800 text-gray-800',
       'failure': 'focus:ring-red-900 text-red-900',
       'gray': 'focus:ring-gray-900 text-gray-900',
-      'info': 'focus:ring-cyan-800 text-cyan-800',
+      'info': 'focus:ring-primary-800 text-primary-800',
       'light': 'focus:ring-gray-900 text-gray-900',
       'purple': 'focus:ring-purple-600 text-purple-600',
       'success': 'focus:ring-green-800 text-green-800',
@@ -902,8 +902,8 @@ const fileInputTheme: FlowbiteFileInputTheme = {
         "lg": "sm:text-md",
       },
       "colors": {
-        "gray": "bg-gray-50 border-gray-300 text-gray-900 focus:border-cyan-500 focus:ring-cyan-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
-        "info": "border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
+        "gray": "bg-gray-50 border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500",
+        "info": "border-primary-500 bg-primary-50 text-primary-900 placeholder-primary-700 focus:border-primary-500 focus:ring-primary-500 dark:border-primary-400 dark:bg-primary-100 dark:focus:border-primary-500 dark:focus:ring-primary-500",
         "failure": "border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500",
         "warning": "border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500",
         "success": "border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500",
@@ -917,7 +917,7 @@ const labelTheme: FlowbiteLabelTheme = {
     disabled: 'opacity-50',
     colors: {
       default: 'text-gray-900',
-      info: 'text-cyan-500',
+      info: 'text-gray-500',
       failure: 'text-red-700',
       warning: 'text-yellow-500',
       success: 'text-green-700',
@@ -975,8 +975,8 @@ const selectTheme: FlowbiteSelectTheme = {
         lg: 'sm:text-md p-4',
       },
       colors: {
-        gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-cyan-500 focus:ring-cyan-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
-        info: 'border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+        gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500',
+        info: 'border-primary-500 bg-primary-50 text-primary-900 placeholder-primary-700 focus:border-primary-500 focus:ring-primary-500 dark:border-primary-400 dark:bg-primary-100 dark:focus:border-primary-500 dark:focus:ring-primary-500',
         failure:
           'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500',
         warning:
@@ -1009,7 +1009,7 @@ const textInputTheme: FlowbiteTextInputTheme = {
       },
       colors: {
         gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-gray-900 focus:ring-gray-900',
-        info: 'border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500',
+        info: 'border-primary-500 bg-primary-50 text-primary-900 placeholder-primary-700 focus:border-primary-500 focus:ring-primary-500',
         failure: 'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500',
         warning: 'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500',
         success: 'border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500'
@@ -1037,7 +1037,7 @@ const textareaTheme: FlowbiteTextareaTheme = {
   base: 'block w-full rounded-lg border disabled:cursor-not-allowed disabled:opacity-50 text-sm',
   colors: {
     gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-primary focus:ring-primary',
-    info: 'border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500',
+    info: 'border-primary-500 bg-primary-50 text-primary-900 placeholder-primary-700 focus:border-primary-500 focus:ring-primary-500',
     failure: 'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500',
     warning: 'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500',
     success: 'border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500',
@@ -1057,7 +1057,7 @@ const toggleSwitchTheme: FlowbiteToggleSwitchTheme = {
     "label": "ml-3 text-sm font-medium text-gray-900 dark:text-gray-300",
   },
   "toggle": {
-    "base": "toggle-bg rounded-full border group-focus:ring-4 group-focus:ring-cyan-500/25",
+    "base": "toggle-bg rounded-full border group-focus:ring-4 group-focus:ring-primary-500/25",
     "checked": {
       "on": "after:translate-x-full after:border-white",
       "off": "border-gray-200 bg-gray-200 dark:border-gray-600 dark:bg-gray-700",
@@ -1077,7 +1077,7 @@ const toggleSwitchTheme: FlowbiteToggleSwitchTheme = {
         "lime": "bg-lime-400 border-lime-400",
         "indigo": "bg-indigo-400 border-indigo-400",
         "teal": "bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4",
-        "info": "bg-cyan-600 border-cyan-600",
+        "info": "bg-primary-600 border-primary-600",
         "pink": "bg-pink-600 border-pink-600",
       },
     },
@@ -1147,8 +1147,8 @@ const timelineTheme: FlowbiteTimelineTheme = {
           "vertical": "absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"
         },
         "icon": {
-          "base": "h-3 w-3 text-cyan-600 dark:text-cyan-300",
-          "wrapper": "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-200 ring-8 ring-white dark:bg-cyan-900 dark:ring-gray-900"
+          "base": "h-3 w-3 text-primary-600 dark:text-primary-300",
+          "wrapper": "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
         }
       },
       "vertical": ""
