@@ -1,40 +1,78 @@
 'use client';
-
-import type { CustomFlowbiteTheme } from 'flowbite-react';
+/* 
+ * find flowbite react component theme
+ * https://github.com/themesberg/flowbite-react/tree/main/src/components
+ */ 
+import type { CustomFlowbiteTheme, 
+  FlowbiteAccordionTheme, 
+  FlowbiteAlertTheme, 
+  FlowbiteAvatarTheme, 
+  FlowbiteBadgeTheme, 
+  FlowbiteBlockquoteTheme, 
+  FlowbiteBreadcrumbTheme, 
+  FlowbiteButtonGroupTheme, 
+  FlowbiteButtonTheme, 
+  FlowbiteCardTheme, 
+  FlowbiteCarouselTheme, 
+  FlowbiteCheckboxTheme, 
+  FlowbiteDropdownTheme, 
+  FlowbiteFileInputTheme, 
+  FlowbiteFooterTheme, 
+  FlowbiteKbdTheme, 
+  FlowbiteLabelTheme, 
+  FlowbiteListGroupTheme, 
+  FlowbiteModalTheme, 
+  FlowbiteNavbarTheme, 
+  FlowbitePaginationTheme, 
+  FlowbiteProgressTheme, 
+  FlowbiteRadioTheme, 
+  FlowbiteRangeSliderTheme, 
+  FlowbiteRatingTheme, 
+  FlowbiteSelectTheme, 
+  FlowbiteSidebarTheme, 
+  FlowbiteSpinnerTheme, 
+  FlowbiteTabsTheme, 
+  FlowbiteTableTheme, 
+  FlowbiteTextInputTheme, 
+  FlowbiteTextareaTheme, 
+  FlowbiteTimelineTheme, 
+  FlowbiteToastTheme, 
+  FlowbiteToggleSwitchTheme, 
+  FlowbiteTooltipTheme } from 'flowbite-react';
 import { Flowbite } from 'flowbite-react';
 
-const accordionTheme = {
-  "root": {
-    "base": "divide-y divide-gray-200 border-gray-200 dark:divide-gray-700 dark:border-gray-700",
-    "flush": {
-      "off": "rounded-lg border",
-      "on": "border-b",
-    },
+const accordionTheme: FlowbiteAccordionTheme = {
+  root: {
+    base:  "divide-y divide-gray-200 border-gray-200 dark:divide-gray-700 dark:border-gray-700",
+    flush: {
+      off: "rounded-lg border",
+      on: "border-b",
+    }
   },
-  "content": {
-    "base": "py-5 px-5 last:rounded-b-lg dark:bg-gray-900 first:rounded-t-lg",
+  content: {
+    base: "py-5 px-5 last:rounded-b-lg dark:bg-gray-900 first:rounded-t-lg",
   },
-  "title": {
-    "arrow": {
+  title: {
+    arrow: {
       "base": "h-6 w-6 shrink-0",
       "open": {
         "off": "",
         "on": "rotate-180",
       },
     },
-    "base": "flex w-full items-center justify-between first:rounded-t-lg last:rounded-b-lg py-5 px-5 text-left font-medium text-gray-500 dark:text-gray-400",
-    "flush": {
-      "off": "hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800",
-      "on": "bg-transparent dark:bg-transparent",
+    base: "flex w-full items-center justify-between first:rounded-t-lg last:rounded-b-lg py-5 px-5 text-left font-medium text-gray-500 dark:text-gray-400",
+    flush: {
+      off: "hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800",
+      on: "bg-transparent dark:bg-transparent",
     },
-    "heading": "",
-    "open": {
-      "off": "",
-      "on": "text-gray-900 bg-gray-100 dark:bg-gray-800 dark:text-white",
+    heading: "",
+    open: {
+      off: "",
+      on: "text-gray-900 bg-gray-100 dark:bg-gray-800 dark:text-white",
     },
   },
 };
-const alertTheme = {
+const alertTheme: FlowbiteAlertTheme = {
   "base": "flex flex-col gap-2 p-4 text-sm",
   "borderAccent": "border-t-4",
   "closeButton": {
@@ -83,7 +121,7 @@ const alertTheme = {
   "rounded": "rounded-lg",
   "wrapper": "flex items-center",
 };
-const avatarTheme = {
+const avatarTheme: FlowbiteAvatarTheme = {
   "root": {
     "base": "flex justify-center items-center space-x-4 rounded",
     "bordered": "p-1 ring-2",
@@ -143,7 +181,7 @@ const avatarTheme = {
     "base": "relative flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 rounded-full ring-2 ring-gray-300 hover:bg-gray-600 dark:ring-gray-500",
   },
 };
-const badgeTheme = {
+const badgeTheme: FlowbiteBadgeTheme = {
   "root": {
     "base": "flex h-fit items-center gap-1 font-semibold",
     "color": {
@@ -180,12 +218,12 @@ const badgeTheme = {
     },
   },
 };
-const blockquoteTheme = {
+const blockquoteTheme: FlowbiteBlockquoteTheme = {
   "root": {
     "base": "text-xl italic font-semibold text-gray-900 dark:text-white",
   },
 };
-const breadcrumbTheme = {
+const breadcrumbTheme: FlowbiteBreadcrumbTheme = {
   "root": {
     "base": "",
     "list": "flex items-center"
@@ -200,7 +238,7 @@ const breadcrumbTheme = {
     "icon": "mr-2 h-4 w-4",
   },
 };
-const buttonTheme = {
+const buttonTheme: FlowbiteButtonTheme = {
   "base": "group flex items-stretch items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none",
   "fullSized": "w-full",
   "color": {
@@ -296,7 +334,7 @@ const buttonTheme = {
     "xl": "text-base px-6 py-3",
   },
 };
-const buttonGroupTheme = {
+const buttonGroupTheme: FlowbiteButtonGroupTheme = {
   "base": "inline-flex",
   "position": {
     "none": "focus:ring-2",
@@ -305,7 +343,7 @@ const buttonGroupTheme = {
     "end": "rounded-l-none border-l-0 pl-0",
   },
 };
-const cardTheme = {
+const cardTheme: FlowbiteCardTheme = {
   "root": {
     "base": "flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800",
     "children": "flex h-full flex-col justify-center gap-4 p-6",
@@ -323,7 +361,7 @@ const cardTheme = {
     },
   },
 };
-const carouselTheme = {
+const carouselTheme: FlowbiteCarouselTheme = {
   "root": {
     "base": "relative h-full w-full",
     "leftControl": "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
@@ -353,183 +391,7 @@ const carouselTheme = {
     "snap": "snap-x",
   },
 };
-const checkboxTheme = {
-  root: {
-    'base': 'h-4 w-4 rounded focus:ring-2 border border-gray-300 bg-gray-100',
-    'color': {
-      'default': 'focus:ring-primary-600 text-primary-600',
-      'dark': 'focus:ring-gray-800 text-gray-800',
-      'failure': 'focus:ring-red-900 text-red-900',
-      'gray': 'focus:ring-gray-900 text-gray-900',
-      'info': 'focus:ring-cyan-800 text-cyan-800',
-      'light': 'focus:ring-gray-900 text-gray-900',
-      'purple': 'focus:ring-purple-600 text-purple-600',
-      'success': 'focus:ring-green-800 text-green-800',
-      'warning': 'focus:ring-yellow-400 text-yellow-400',
-      'blue': 'focus:ring-blue-600 text-blue-700',
-      'cyan': 'focus:ring-cyan-600 text-cyan-600',
-      'green': 'focus:ring-green-600 text-green-600',
-      'indigo': 'focus:ring-indigo-700 text-indigo-700',
-      'lime': 'focus:ring-lime-700 text-lime-700',
-      'pink': 'focus:ring-pink-600 text-pink-600',
-      'red': 'focus:ring-red-600 text-red-600',
-      'teal': 'focus:ring-teal-600 text-teal-600',
-      'yellow': 'focus:ring-yellow-400 text-yellow-400',
-    }
-  }
-};
-const dropdownTheme = {
-  "arrowIcon": "ml-2 h-4 w-4",
-  "content": "py-1 focus:outline-none",
-  "floating": {
-    "animation": "transition-opacity",
-    "arrow": {
-      "base": "absolute z-10 h-2 w-2 rotate-45",
-      "style": {
-        "dark": "bg-gray-900 dark:bg-gray-700",
-        "light": "bg-white",
-        "auto": "bg-white dark:bg-gray-700",
-      },
-      "placement": "-4px",
-    },
-    "base": "z-10 w-fit rounded divide-y divide-gray-100 shadow focus:outline-none",
-    "content": "py-1 text-sm text-gray-700 dark:text-gray-200",
-    "divider": "my-1 h-px bg-gray-100 dark:bg-gray-600",
-    "header": "block py-2 px-4 text-sm text-gray-700 dark:text-gray-200",
-    "hidden": "invisible opacity-0",
-    "item": {
-      "container": "",
-      "base": "flex items-center justify-start py-2 px-4 text-sm text-gray-700 cursor-pointer w-full hover:bg-gray-100 focus:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 focus:outline-none dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white",
-      "icon": "mr-2 h-4 w-4",
-    },
-    "style": {
-      "dark": "bg-gray-900 text-white dark:bg-gray-700",
-      "light": "border border-gray-200 bg-white text-gray-900",
-      "auto": "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white",
-    },
-    "target": "w-fit",
-  },
-  "inlineWrapper": "flex items-center",
-};
-const fileInputTheme = {
-  "root": {
-    "base": "flex",
-  },
-  "field": {
-    "base": "relative w-full",
-    "input": {
-      "base": "rounded-lg overflow-hidden block w-full border disabled:cursor-not-allowed disabled:opacity-50",
-      "sizes": {
-        "sm": "sm:text-xs",
-        "md": "text-sm",
-        "lg": "sm:text-md",
-      },
-      "colors": {
-        "gray": "bg-gray-50 border-gray-300 text-gray-900 focus:border-cyan-500 focus:ring-cyan-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
-        "info": "border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
-        "failure": "border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500",
-        "warning": "border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500",
-        "success": "border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500",
-      },
-    },
-  },
-};
-const floatingLabelTheme = {
-  "input": {
-    "default": {
-      "filled": {
-        "sm": "peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 bg-gray-50 px-2.5 pb-2.5 pt-5 text-xs text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-500",
-        "md": "peer block w-full appearance-none rounded-t-lg border-0 border-b-2 border-gray-300 bg-gray-50 px-2.5 pb-2.5 pt-5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-500",
-      },
-      "outlined": {
-        "sm": "border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-xs text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500",
-        "md": "border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500",
-      },
-      "standard": {
-        "sm": "block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer",
-        "md": "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer",
-      },
-    },
-    "success": {
-      "filled": {
-        "sm": "block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-xs text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-green-600 dark:border-green-500 appearance-none dark:text-white dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer",
-        "md": "block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-green-600 dark:border-green-500 appearance-none dark:text-white dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer",
-      },
-      "outlined": {
-        "sm": "block px-2.5 pb-2.5 pt-4 w-full text-xs text-gray-900 bg-transparent rounded-lg border-1 border-green-600 appearance-none dark:text-white dark:border-green-500 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer",
-        "md": "block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-green-600 appearance-none dark:text-white dark:border-green-500 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer",
-      },
-      "standard": {
-        "sm": "block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-green-600 appearance-none dark:text-white dark:border-green-500 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer",
-        "md": "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-green-600 appearance-none dark:text-white dark:border-green-500 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer",
-      },
-    },
-    "error": {
-      "filled": {
-        "sm": "block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-xs text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none dark:text-white dark:border-red-500 focus:outline-none focus:ring-0 border-red-600 focus:border-red-600 dark:focus-border-red-500 peer",
-        "md": "block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 appearance-none dark:text-white dark:border-red-500 focus:outline-none focus:ring-0 border-red-600 focus:border-red-600 dark:focus-border-red-500 peer",
-      },
-      "outlined": {
-        "sm": "block px-2.5 pb-2.5 pt-4 w-full text-xs text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:border-red-500 border-red-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer",
-        "md": "block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:border-red-500 border-red-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer",
-      },
-      "standard": {
-        "sm": "block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-red-600 appearance-none dark:text-white dark:border-red-500 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer",
-        "md": "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-red-600 appearance-none dark:text-white dark:border-red-500 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer",
-      },
-    },
-  },
-  "label": {
-    "default": {
-      "filled": {
-        "sm": "absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transition-transform text-xs text-gray-500  duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500",
-        "md": "absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transition-transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500",
-      },
-      "outlined": {
-        "sm": "absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transition-transform bg-white px-2 text-xs text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 dark:bg-gray-900 dark:text-gray-400 peer-focus:dark:text-blue-500",
-        "md": "absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transition-transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 dark:bg-gray-900 dark:text-gray-400 peer-focus:dark:text-blue-500",
-      },
-      "standard": {
-        "sm": "absolute text-xs text-gray-500 dark:text-gray-400  transition-transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] duration-300 peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6",
-        "md": "absolute text-sm text-gray-500 dark:text-gray-400  transition-transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] duration-300 peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6",
-      },
-    },
-    "success": {
-      "filled": {
-        "sm": "absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transition-transform text-sm text-green-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 dark:text-green-500",
-        "md": "absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transition-transform text-sm text-green-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 dark:text-green-500",
-      },
-      "outlined": {
-        "sm": "absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transition-transform bg-white px-2 text-sm text-green-600 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-gray-900 dark:text-green-500",
-        "md": "absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transition-transform bg-white px-2 text-sm text-green-600 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-gray-900 dark:text-green-500",
-      },
-      "standard": {
-        "sm": "absolute text-xs text-green-600 dark:text-green-500  transition-transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] duration-300 peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6",
-        "md": "absolute text-sm text-green-600 dark:text-green-500  transition-transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] duration-300 peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6",
-      },
-    },
-    "error": {
-      "filled": {
-        "sm": "absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transition-transform text-xs text-red-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 dark:text-red-500",
-        "md": "absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transition-transform text-xs text-red-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 dark:text-red-500",
-      },
-      "outlined": {
-        "sm": "absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transition-transform bg-white px-2 text-xs text-red-600 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-gray-900 dark:text-red-500",
-        "md": "absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transition-transform bg-white px-2 text-xs text-red-600 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-gray-900 dark:text-red-500",
-      },
-      "standard": {
-        "sm": "absolute text-xs text-red-600 dark:text-red-500  transition-transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] duration-300 peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6",
-        "md": "absolute text-sm text-red-600 dark:text-red-500  transition-transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] duration-300 peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6",
-      },
-    },
-  },
-  "helperText": {
-    "default": "mt-2 text-xs text-gray-600 dark:text-gray-400",
-    "success": "mt-2 text-xs text-green-600 dark:text-green-400",
-    "error": "mt-2 text-xs text-red-600 dark:text-red-400",
-  },
-};
-const footerTheme = {
+const footerTheme: FlowbiteFooterTheme = {
   "root": {
     "base": "w-full rounded-lg bg-white shadow dark:bg-gray-800 md:flex md:items-center md:justify-between",
     "container": "w-full p-6",
@@ -564,26 +426,13 @@ const footerTheme = {
     "span": "self-center whitespace-nowrap text-2xl font-semibold text-gray-800 dark:text-white",
   },
 };
-const kbdTheme = {
+const kbdTheme: FlowbiteKbdTheme = {
   "root": {
     "base": "px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500",
     "icon": "inline-block",
   },
 };
-const labelTheme = {
-  root: {
-    base: 'text-sm font-bold',
-    disabled: 'opacity-50',
-    colors: {
-      default: 'text-gray-900',
-      info: 'text-cyan-500',
-      failure: 'text-red-700',
-      warning: 'text-yellow-500',
-      success: 'text-green-700',
-    }
-  }
-};
-const listGroupTheme = {
+const listGroupTheme: FlowbiteListGroupTheme = {
   "root": {
     "base": "list-none rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-left",
   },
@@ -607,7 +456,7 @@ const listGroupTheme = {
     },
   },
 };
-const modalTheme = {
+const modalTheme: FlowbiteModalTheme = {
   "root": {
     "base": "fixed top-0 right-0 left-0 z-50 h-modal h-screen overflow-y-auto overflow-x-hidden md:inset-0 md:h-full",
     "show": {
@@ -660,7 +509,7 @@ const modalTheme = {
     "popup": "border-t",
   },
 };
-const navbarTheme = {
+const navbarTheme: FlowbiteNavbarTheme = {
   "root": {
     "base": "bg-white px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4",
     "rounded": {
@@ -706,7 +555,21 @@ const navbarTheme = {
     "icon": "h-6 w-6 shrink-0",
   },
 };
-const paginationTheme = {
+const ratingTheme: FlowbiteRatingTheme = {
+  "root": {
+    "base": "flex items-center"
+  },
+  "star": {
+    "empty": "text-gray-300 dark:text-gray-500",
+    "filled": "text-yellow-400",
+    "sizes": {
+      "sm": "w-5 h-5",
+      "md": "w-7 h-7",
+      "lg": "w-10 h-10"
+    }
+  },
+};
+const paginationTheme: FlowbitePaginationTheme = {
   "base": "",
   "layout": {
     "table": {
@@ -732,63 +595,7 @@ const paginationTheme = {
     },
   },
 };
-const progressTheme = {
-  "base": "w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700",
-  "label": "mb-1 flex justify-between font-medium dark:text-white",
-  "bar": "rounded-full text-center font-medium leading-none text-cyan-300 dark:text-cyan-100 space-x-2",
-  "color": {
-    "dark": "bg-gray-600 dark:bg-gray-300",
-    "blue": "bg-blue-600",
-    "red": "bg-red-600 dark:bg-red-500",
-    "green": "bg-green-600 dark:bg-green-500",
-    "yellow": "bg-yellow-400",
-    "indigo": "bg-indigo-600 dark:bg-indigo-500",
-    "purple": "bg-purple-600 dark:bg-purple-500",
-    "cyan": "bg-cyan-600",
-    "gray": "bg-gray-500",
-    "lime": "bg-lime-600",
-    "pink": "bg-pink-500",
-    "teal": "bg-teal-600",
-  },
-  "size": {
-    "sm": "h-1.5",
-    "md": "h-2.5",
-    "lg": "h-4",
-    "xl": "h-6",
-  },
-};
-const radioTheme = {
-  root: {
-    base: 'h-4 w-4 border border-gray-300 focus:ring-2 focus:ring-primary text-primary-600',
-  }
-};
-const rangeSliderTheme = {
-  "root": {
-    "base": "flex",
-  },
-  "field": {
-    "base": "relative w-full",
-    "input": {
-      "base": "w-full bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700",
-      "sizes": {
-        "sm": "h-1 range-sm",
-        "md": "h-2",
-        "lg": "h-3 range-lg",
-      },
-    },
-  },
-};
-const ratingTheme = {
-  "base": "flex items-center",
-  "label": "text-sm font-medium text-cyan-600 dark:text-cyan-500",
-  "progress": {
-    "base": "mx-4 h-5 w-2/4 rounded bg-gray-200 dark:bg-gray-700",
-    "fill": "h-5 rounded bg-yellow-400",
-    "label": "text-sm font-medium text-cyan-600 dark:text-cyan-500",
-  },
-};
-const selectTheme = {};
-const sidebarTheme = {
+const sidebarTheme: FlowbiteSidebarTheme = {
   "root": {
     "base": "h-full",
     "collapsed": {
@@ -866,7 +673,32 @@ const sidebarTheme = {
     "img": "mr-3 h-6 sm:h-7",
   },
 };
-const spinnerTheme = {
+const progressTheme: FlowbiteProgressTheme = {
+  "base": "w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700",
+  "label": "mb-1 flex justify-between font-medium dark:text-white",
+  "bar": "rounded-full text-center font-medium leading-none text-cyan-300 dark:text-cyan-100 space-x-2",
+  "color": {
+    "dark": "bg-gray-600 dark:bg-gray-300",
+    "blue": "bg-blue-600",
+    "red": "bg-red-600 dark:bg-red-500",
+    "green": "bg-green-600 dark:bg-green-500",
+    "yellow": "bg-yellow-400",
+    "indigo": "bg-indigo-600 dark:bg-indigo-500",
+    "purple": "bg-purple-600 dark:bg-purple-500",
+    "cyan": "bg-cyan-600",
+    "gray": "bg-gray-500",
+    "lime": "bg-lime-600",
+    "pink": "bg-pink-500",
+    "teal": "bg-teal-600",
+  },
+  "size": {
+    "sm": "h-1.5",
+    "md": "h-2.5",
+    "lg": "h-4",
+    "xl": "h-6",
+  },
+};
+const spinnerTheme: FlowbiteSpinnerTheme = {
   "base": "inline animate-spin text-gray-200",
   "color": {
     "failure": "fill-red-600",
@@ -911,7 +743,7 @@ const spinnerTheme = {
     "xl": "w-10 h-10",
   },
 };
-const tabTheme = {
+const tabsTheme: FlowbiteTabsTheme = {
   "base": "flex flex-col gap-2",
   "tablist": {
     "base": "flex text-center",
@@ -967,45 +799,195 @@ const tabTheme = {
   },
   "tabpanel": "py-3",
 };
-const tableTheme = {
+const toastTheme: FlowbiteToastTheme = {
   "root": {
-    "base": "w-full text-left text-sm text-gray-500 dark:text-gray-400",
-    "shadow": "absolute bg-white dark:bg-black w-full h-full top-0 left-0 rounded-lg drop-shadow-md -z-10",
-    "wrapper": "relative",
+    "base": "flex w-full max-w-xs items-center rounded-lg bg-white p-4 text-gray-500 shadow dark:bg-gray-800 dark:text-gray-400",
+    "closed": "opacity-0 ease-out",
   },
-  "body": {
-    "base": "group/body",
-    "cell": {
-      "base": "group-first/body:group-first/row:first:rounded-tl-lg group-first/body:group-first/row:last:rounded-tr-lg group-last/body:group-last/row:first:rounded-bl-lg group-last/body:group-last/row:last:rounded-br-lg px-6 py-4",
-    },
-  },
-  "head": {
-    "base": "group/head text-xs uppercase text-gray-700 dark:text-gray-400",
-    "cell": {
-      "base": "group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg bg-gray-50 dark:bg-gray-700 px-6 py-3",
-    },
-  },
-  "row": {
-    "base": "group/row",
-    "hovered": "hover:bg-gray-50 dark:hover:bg-gray-600",
-    "striped": "odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700",
+  "toggle": {
+    "base": "-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg bg-white p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white",
+    "icon": "h-5 w-5 shrink-0",
   },
 };
-const textareaTheme = {
-  base: 'block w-full rounded-lg border disabled:cursor-not-allowed disabled:opacity-50 text-sm',
-  colors: {
-    gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-primary focus:ring-primary',
-    info: 'border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500',
-    failure: 'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500',
-    warning: 'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500',
-    success: 'border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500',
+const tooltipTheme: FlowbiteTooltipTheme = {
+  "target": "w-fit",
+  "animation": "transition-opacity",
+  "arrow": {
+    "base": "absolute z-10 h-2 w-2 rotate-45",
+    "style": {
+      "dark": "bg-gray-900 dark:bg-gray-700",
+      "light": "bg-white",
+      "auto": "bg-white dark:bg-gray-700",
+    },
+    "placement": "-4px",
   },
-  withShadow: {
-    on: 'shadow-sm',
-    off: ''
+  "base": "absolute inline-block z-10 rounded-lg py-2 px-3 text-sm font-medium shadow-sm",
+  "hidden": "invisible opacity-0",
+  "style": {
+    "dark": "bg-gray-900 text-white dark:bg-gray-700",
+    "light": "border border-gray-200 bg-white text-gray-900",
+    "auto": "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white",
+  },
+  "content": "relative z-20",
+};
+const dropdownTheme: FlowbiteDropdownTheme = {
+  "arrowIcon": "ml-2 h-4 w-4",
+  "content": "py-1 focus:outline-none",
+  "floating": {
+    "animation": "transition-opacity",
+    "arrow": {
+      "base": "absolute z-10 h-2 w-2 rotate-45",
+      "style": {
+        "dark": "bg-gray-900 dark:bg-gray-700",
+        "light": "bg-white",
+        "auto": "bg-white dark:bg-gray-700",
+      },
+      "placement": "-4px",
+    },
+    "base": "z-10 w-fit rounded divide-y divide-gray-100 shadow focus:outline-none",
+    "content": "py-1 text-sm text-gray-700 dark:text-gray-200",
+    "divider": "my-1 h-px bg-gray-100 dark:bg-gray-600",
+    "header": "block py-2 px-4 text-sm text-gray-700 dark:text-gray-200",
+    "hidden": "invisible opacity-0",
+    "item": {
+      "container": "",
+      "base": "flex items-center justify-start py-2 px-4 text-sm text-gray-700 cursor-pointer w-full hover:bg-gray-100 focus:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 focus:outline-none dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white",
+      "icon": "mr-2 h-4 w-4",
+    },
+    "style": {
+      "dark": "bg-gray-900 text-white dark:bg-gray-700",
+      "light": "border border-gray-200 bg-white text-gray-900",
+      "auto": "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white",
+    },
+    "target": "w-fit",
+  },
+  "inlineWrapper": "flex items-center",
+};
+const checkboxTheme: FlowbiteCheckboxTheme = {
+  root: {
+    'base': 'h-4 w-4 rounded focus:ring-2 border border-gray-300 bg-gray-100',
+    'color': {
+      'default': 'focus:ring-primary-600 text-primary-600',
+      'dark': 'focus:ring-gray-800 text-gray-800',
+      'failure': 'focus:ring-red-900 text-red-900',
+      'gray': 'focus:ring-gray-900 text-gray-900',
+      'info': 'focus:ring-cyan-800 text-cyan-800',
+      'light': 'focus:ring-gray-900 text-gray-900',
+      'purple': 'focus:ring-purple-600 text-purple-600',
+      'success': 'focus:ring-green-800 text-green-800',
+      'warning': 'focus:ring-yellow-400 text-yellow-400',
+      'blue': 'focus:ring-blue-600 text-blue-700',
+      'cyan': 'focus:ring-cyan-600 text-cyan-600',
+      'green': 'focus:ring-green-600 text-green-600',
+      'indigo': 'focus:ring-indigo-700 text-indigo-700',
+      'lime': 'focus:ring-lime-700 text-lime-700',
+      'pink': 'focus:ring-pink-600 text-pink-600',
+      'red': 'focus:ring-red-600 text-red-600',
+      'teal': 'focus:ring-teal-600 text-teal-600',
+      'yellow': 'focus:ring-yellow-400 text-yellow-400',
+    }
   }
 };
-const textInputTheme = {
+const fileInputTheme: FlowbiteFileInputTheme = {
+  "root": {
+    "base": "flex",
+  },
+  "field": {
+    "base": "relative w-full",
+    "input": {
+      "base": "rounded-lg overflow-hidden block w-full border disabled:cursor-not-allowed disabled:opacity-50",
+      "sizes": {
+        "sm": "sm:text-xs",
+        "md": "text-sm",
+        "lg": "sm:text-md",
+      },
+      "colors": {
+        "gray": "bg-gray-50 border-gray-300 text-gray-900 focus:border-cyan-500 focus:ring-cyan-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
+        "info": "border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
+        "failure": "border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500",
+        "warning": "border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500",
+        "success": "border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500",
+      },
+    },
+  },
+};
+const labelTheme: FlowbiteLabelTheme = {
+  root: {
+    base: 'text-sm font-bold',
+    disabled: 'opacity-50',
+    colors: {
+      default: 'text-gray-900',
+      info: 'text-cyan-500',
+      failure: 'text-red-700',
+      warning: 'text-yellow-500',
+      success: 'text-green-700',
+    }
+  }
+};
+const radioTheme: FlowbiteRadioTheme = {
+  root: {
+    base: 'h-4 w-4 border border-gray-300 focus:ring-2 focus:ring-primary text-primary-600',
+  }
+};
+const rangeSliderTheme: FlowbiteRangeSliderTheme = {
+  "root": {
+    "base": "flex",
+  },
+  "field": {
+    "base": "relative w-full",
+    "input": {
+      "base": "w-full bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700",
+      "sizes": {
+        "sm": "h-1 range-sm",
+        "md": "h-2",
+        "lg": "h-3 range-lg",
+      },
+    },
+  },
+};
+const selectTheme: FlowbiteSelectTheme = {
+  base: 'flex',
+  addon:
+    'inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400',
+  field: {
+    base: 'relative w-full',
+    icon: {
+      base: 'pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3',
+      svg: 'h-5 w-5 text-gray-500 dark:text-gray-400',
+    },
+    select: {
+      base: 'block w-full border disabled:cursor-not-allowed disabled:opacity-50',
+      withIcon: {
+        on: 'pl-10',
+        off: '',
+      },
+      withAddon: {
+        on: 'rounded-r-lg',
+        off: 'rounded-lg',
+      },
+      withShadow: {
+        on: 'shadow-sm dark:shadow-sm-light',
+        off: '',
+      },
+      sizes: {
+        sm: 'p-2 sm:text-xs',
+        md: 'p-2.5 text-sm',
+        lg: 'sm:text-md p-4',
+      },
+      colors: {
+        gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-cyan-500 focus:ring-cyan-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+        info: 'border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+        failure:
+          'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500',
+        warning:
+          'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500',
+        success:
+          'border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500',
+      },
+    },
+  },
+};
+const textInputTheme: FlowbiteTextInputTheme = {
   base: 'flex',
   addon: 'inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900',
   field: {
@@ -1051,60 +1033,21 @@ const textInputTheme = {
     }
   }
 };
-const timelineTheme = {
-  "root": {
-    "direction": {
-      "horizontal": "items-base sm:flex",
-      "vertical": "relative border-l border-gray-200 dark:border-gray-700",
-    },
+const textareaTheme: FlowbiteTextareaTheme = {
+  base: 'block w-full rounded-lg border disabled:cursor-not-allowed disabled:opacity-50 text-sm',
+  colors: {
+    gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-primary focus:ring-primary',
+    info: 'border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500',
+    failure: 'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500',
+    warning: 'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500',
+    success: 'border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500',
   },
-  "item": {
-    "root": {
-      "horizontal": "relative mb-6 sm:mb-0",
-      "vertical": "mb-10 ml-6",
-    },
-    "content": {
-      "root": {
-        "base": "mt-3 sm:pr-8",
-      },
-      "body": {
-        "base": "mb-4 text-base font-normal text-gray-500 dark:text-gray-400",
-      },
-      "time": {
-        "base": "mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500",
-      },
-      "title": {
-        "base": "text-lg font-semibold text-gray-900 dark:text-white",
-      },
-    },
-    "point": {
-      "horizontal": "flex items-center",
-      "line": "hidden h-0.5 w-full bg-gray-200 dark:bg-gray-700 sm:flex",
-      "marker": {
-        "base": {
-          "horizontal": "absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700",
-          "vertical": "absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700",
-        },
-        "icon": {
-          "base": "h-3 w-3 text-cyan-600 dark:text-cyan-300",
-          "wrapper": "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-200 ring-8 ring-white dark:bg-cyan-900 dark:ring-gray-900",
-        },
-      },
-      "vertical": "",
-    },
-  },
+  withShadow: {
+    on: 'shadow-sm',
+    off: ''
+  }
 };
-const toastTheme = {
-  "root": {
-    "base": "flex w-full max-w-xs items-center rounded-lg bg-white p-4 text-gray-500 shadow dark:bg-gray-800 dark:text-gray-400",
-    "closed": "opacity-0 ease-out",
-  },
-  "toggle": {
-    "base": "-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg bg-white p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white",
-    "icon": "h-5 w-5 shrink-0",
-  },
-};
-const toggleSwitchTheme = {
+const toggleSwitchTheme: FlowbiteToggleSwitchTheme = {
   "root": {
     "base": "group relative flex items-center rounded-lg focus:outline-none",
     "active": {
@@ -1145,26 +1088,72 @@ const toggleSwitchTheme = {
     },
   },
 };
-const tooltipTheme = {
-  "target": "w-fit",
-  "animation": "transition-opacity",
-  "arrow": {
-    "base": "absolute z-10 h-2 w-2 rotate-45",
-    "style": {
-      "dark": "bg-gray-900 dark:bg-gray-700",
-      "light": "bg-white",
-      "auto": "bg-white dark:bg-gray-700",
+const tableTheme: FlowbiteTableTheme = {
+  "root": {
+    "base": "w-full text-left text-sm text-gray-500 dark:text-gray-400",
+    "shadow": "absolute bg-white dark:bg-black w-full h-full top-0 left-0 rounded-lg drop-shadow-md -z-10",
+    "wrapper": "relative",
+  },
+  "body": {
+    "base": "group/body",
+    "cell": {
+      "base": "group-first/body:group-first/row:first:rounded-tl-lg group-first/body:group-first/row:last:rounded-tr-lg group-last/body:group-last/row:first:rounded-bl-lg group-last/body:group-last/row:last:rounded-br-lg px-6 py-4",
     },
-    "placement": "-4px",
   },
-  "base": "absolute inline-block z-10 rounded-lg py-2 px-3 text-sm font-medium shadow-sm",
-  "hidden": "invisible opacity-0",
-  "style": {
-    "dark": "bg-gray-900 text-white dark:bg-gray-700",
-    "light": "border border-gray-200 bg-white text-gray-900",
-    "auto": "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white",
+  "head": {
+    "base": "group/head text-xs uppercase text-gray-700 dark:text-gray-400",
+    "cell": {
+      "base": "group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg bg-gray-50 dark:bg-gray-700 px-6 py-3",
+    },
   },
-  "content": "relative z-20",
+  "row": {
+    "base": "group/row",
+    "hovered": "hover:bg-gray-50 dark:hover:bg-gray-600",
+    "striped": "odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700",
+  },
+};
+const timelineTheme: FlowbiteTimelineTheme = {
+  "root": {
+    "direction": {
+      "horizontal": "items-base sm:flex",
+      "vertical": "relative border-l border-gray-200 dark:border-gray-700"
+    }
+  },
+  "item": {
+    "root": {
+      "horizontal": "relative mb-6 sm:mb-0",
+      "vertical": "mb-10 ml-6"
+    },
+    "content": {
+      "root": {
+        "base": "mt-3 sm:pr-8"
+      },
+      "body": {
+        "base": "mb-4 text-base font-normal text-gray-500 dark:text-gray-400",
+      },
+      "time": {
+        "base": "mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500",
+      },
+      "title": {
+        "base": "text-lg font-semibold text-gray-900 dark:text-white",
+      },
+    },
+    "point": {
+      "horizontal": "flex items-center",
+      "line": "hidden h-0.5 w-full bg-gray-200 dark:bg-gray-700 sm:flex",
+      "marker": {
+        "base": {
+          "horizontal": "absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700",
+          "vertical": "absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"
+        },
+        "icon": {
+          "base": "h-3 w-3 text-cyan-600 dark:text-cyan-300",
+          "wrapper": "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-200 ring-8 ring-white dark:bg-cyan-900 dark:ring-gray-900"
+        }
+      },
+      "vertical": ""
+    }
+  }
 };
 
 const customTheme: CustomFlowbiteTheme = {
@@ -1181,7 +1170,6 @@ const customTheme: CustomFlowbiteTheme = {
   checkbox: checkboxTheme , 
   dropdown: dropdownTheme , 
   fileInput: fileInputTheme , 
-  floatingLabel: floatingLabelTheme , 
   footer: footerTheme , 
   kbd: kbdTheme , 
   label: labelTheme , 
@@ -1196,7 +1184,7 @@ const customTheme: CustomFlowbiteTheme = {
   select: selectTheme , 
   sidebar: sidebarTheme , 
   spinner: spinnerTheme , 
-  tab: tabTheme , 
+  tabs: tabsTheme , 
   table: tableTheme , 
   textarea: textareaTheme , 
   textInput: textInputTheme , 

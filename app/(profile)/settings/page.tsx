@@ -72,7 +72,7 @@ export default function SettingsPage() {
             <div className="mb-2 block">
               <Label htmlFor="birthday" value="Birthday" />
             </div>
-            <CustomDatepicker onChange={(d:date) => { console.log(d); }} maxDate={new Date()}></CustomDatepicker>
+            <CustomDatepicker onChange={(d:Date) => { console.log(d); }} maxDate={new Date()}></CustomDatepicker>
           </div>
           <div>
             <div className="mb-2 block">

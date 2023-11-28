@@ -24,7 +24,7 @@ export default function CustomDatepickerDayHeader({
 
   const isAvailableMove = (moveValue: number) => {
     const targetDate = getDate({date: new Date(pickerDate), month: moveValue});
-    if ( targetDate < minDate | targetDate > maxDate ) {
+    if ( targetDate < minDate || targetDate > maxDate ) {
       return false;
     } else {
       return true;

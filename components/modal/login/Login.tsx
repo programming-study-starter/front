@@ -2,7 +2,8 @@
 
 import { FormEvent, useState } from 'react';
 import { setCookie } from 'cookies-next';
-import axios from '@/components/modules/Axios';
+
+import { postApi } from '@/components/modules/Fetch';
 import { useRouter, usePathname } from 'next/navigation';
 import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { HiMail, HiLockClosed } from 'react-icons/hi';
@@ -22,21 +23,19 @@ export default function LoginModal() {
 
   const submitLogin = (e:FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(`${process.env.NEXT_PUBLIC_BACK_API_URL}/auth/login`)
-    axios.post('/back-api/auth/login', {email, password})
-    .then((res) => {
-      console.log(res);
+    postApi('/back-api/auth/login', {email:email, password:password})
+    .then((data) => {
       const loginResult:LoginDataType = {
-        token: res.data.accessToken,
-        address: res.data.address,
-        addressDetail: res.data.addressDetail,
-        birthDay: res.data.birthDay,
-        email: res.data.email,
-        gender: res.data.gender,
-        mobile: res.data.mobile,
-        nickname: res.data.nickname,
-        username: res.data.username,
-        zipCode: res.data.zipCode,
+        token: data.accessToken,
+        address: data.address,
+        addressDetail: data.addressDetail,
+        birthDay: data.birthDay,
+        email: data.email,
+        gender: data.gender,
+        mobile: data.mobile,
+        nickname: data.nickname,
+        username: data.username,
+        zipCode: data.zipCode,
       };
       setData(loginResult);
       setLoginCookieData(loginResult);

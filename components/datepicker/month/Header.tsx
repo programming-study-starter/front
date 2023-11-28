@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Button } from 'flowbite-react';
 
-import { CustomDatepickerHeaderType } from '@/components/datepicker/type/CustomDatepickerType';
+import { CustomDatepickerType } from '@/components/datepicker/type/CustomDatepickerType';
 import { getDate, getDateYyyyMMdd } from '@/components/utils/DateUtil';
 
 export default function CustomDatepickerMonthHeader({
@@ -13,7 +13,7 @@ export default function CustomDatepickerMonthHeader({
   onSelect,
   minDate=getDate({year: -100}),
   maxDate=getDate({year: 100}),
-} : CustomDatepickerHeaderType) {
+} : CustomDatepickerType) {
 
   const onClickMove = (moveValue: number) => {
     if ( isAvailableMove(moveValue) ) {
@@ -24,7 +24,7 @@ export default function CustomDatepickerMonthHeader({
 
   const isAvailableMove = (moveValue: number) => {
     const targetDate = getDate({date: new Date(pickerDate), month: moveValue});
-    if ( targetDate < minDate | targetDate > maxDate ) {
+    if ( targetDate < minDate || targetDate > maxDate ) {
       return false;
     } else {
       return true;

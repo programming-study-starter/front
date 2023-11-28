@@ -1,4 +1,4 @@
-const getDate = (param:{date:date, year:number, month:number, day:number}={date:new Date(), year:0, month:0, day:0}):Date => {
+const getDate = (param:{date?:Date, year?:number, month?:number, day?:number}={date:new Date(), year:0, month:0, day:0}):Date => {
   let result = new Date();
   if ( param.date ) {
     result = param.date;
@@ -69,7 +69,7 @@ const getMonthOfCalendar = ():string[] => {
   return result;
 }
 
-const getYearOfCalendar = (d:date=new Date()):string[] => {
+const getYearOfCalendar = (d:Date=new Date()):string[] => {
   const startYear = Math.floor(d.getFullYear() / 10) * 10;
   return Array(10).fill(1).map((d:number, idx:number) => String(startYear+idx));
 }

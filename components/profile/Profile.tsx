@@ -25,12 +25,6 @@ export default function ProfileComponent() {
   return (
     <div className="pr-2 flex flex-row gap-4">
       <UserAlert/>
-      <Dropdown arrowIcon={false} inline label={ <Avatar className={`cursor-pointer`} img={`/icons/outline/general/bell.svg`} alt={`user`} size={`sm`} rounded bordered /> }>
-        <Dropdown.Header>New messages</Dropdown.Header>
-        <Dropdown.Item>Test1</Dropdown.Item>
-        <Dropdown.Item>Test2</Dropdown.Item>
-        <Dropdown.Item>Test3</Dropdown.Item>
-      </Dropdown>
       <Dropdown arrowIcon={false} inline label={ <Avatar img={defaultAvatarImg} alt={`user`} size={`md`} rounded bordered /> }>
         <Dropdown.Header>
           <span className="block text-sm">{getCookie('username')}</span>

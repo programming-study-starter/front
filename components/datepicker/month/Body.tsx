@@ -1,6 +1,6 @@
 import { Button } from 'flowbite-react';
 
-import { CustomDatepickerBodyType } from '@/components/datepicker/type/CustomDatepickerType';
+import { CustomDatepickerType } from '@/components/datepicker/type/CustomDatepickerType';
 import { getDate, getDateYyyyMM, getDateYyyyMMdd } from '@/components/utils/DateUtil';
 
 import { getMonthOfCalendar } from '@/components/utils/DateUtil';
@@ -13,7 +13,7 @@ export default function CustomDatepickerMonthBody({
   onSelect,
   minDate=getDate({year: -100}),
   maxDate=getDate({year: 100}),
-} : CustomDatepickerBodyType) {
+} : CustomDatepickerType) {
   const months = getMonthOfCalendar();
 
   const onClickMonth = (month:string) => {
@@ -25,9 +25,9 @@ export default function CustomDatepickerMonthBody({
   return (
     <div className='mt-2 grid grid-cols-4 gap-2'>
       {
-        months.map((d:number) => {
+        months.map((d:string) => {
           const thisMonth = `${pickerDate.substring(0, 4)}-${d}`;
-          const disabled = (Number(thisMonth.replace('-', '')) < Number(getDateYyyyMM(minDate).replace('-', '')) | Number(thisMonth.replace('-', '')) > Number(getDateYyyyMM(maxDate).replace('-', '')));
+          const disabled = (Number(thisMonth.replace('-', '')) < Number(getDateYyyyMM(minDate).replace('-', '')) || Number(thisMonth.replace('-', '')) > Number(getDateYyyyMM(maxDate).replace('-', '')));
           return (
             <Button key={`month-${d}`} 
                     size={`sm`} 

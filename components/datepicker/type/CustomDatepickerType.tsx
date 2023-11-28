@@ -2,8 +2,8 @@ export interface CustomDatepickerType {
   onModeChange: Function, 
   pickerDate: string, 
   onPickerDateChange: Function,
-  selectedDate: string,
+  selectedDate: string | undefined,
   onSelect: Function,
-  minDate: date,
-  maxDate: date,
+  minDate: Date,
+  maxDate: Date,
 }

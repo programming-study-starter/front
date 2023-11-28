@@ -2,6 +2,7 @@ import Header from '@/components/datepicker/year/Header';
 import Body from '@/components/datepicker/year/Body';
 
 import { CustomDatepickerType } from '@/components/datepicker/type/CustomDatepickerType';
+import { getDate } from '@/components/utils/DateUtil';
 
 export default function CustomDatepickerYear({
   onModeChange,

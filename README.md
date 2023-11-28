@@ -2,6 +2,11 @@
 
 - Next.js 를 활용한 Front end project
 
+## Skill
+
+- Next.js
+- swr
+
 ## Tool
 
 - VS Code

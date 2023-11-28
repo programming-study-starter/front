@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import { getCookie } from "cookies-next";
 
 axios.defaults.withCredentials = true;
@@ -26,7 +25,6 @@ axios.interceptors.response.use(
       console.error(error);
     }
     const { response } = error;
-    const router = useRouter();
     switch(response.status) {
       case 401:
         console.error(`다시 로그인해주세요`);
@@ -40,4 +38,19 @@ axios.interceptors.response.use(
 
 );
 
+// const getFetcher = (url:string) => axios.get(url).then(res => res.data);
+// const postFetcher = (url:string, params:{[key:string]: any}) => axios.post(url, params).then(res => res.data);
+// const patchFetcher = (url:string, params:{[key:string]: any}) => axios.patch(url, params).then(res => res.data);
+// const putFetcher = (url:string, params:{[key:string]: any}) => axios.put(url, params).then(res => res.data);
+// const deleteFetcher = (url:string) => axios.delete(url).then(res => res.data);
+
 export default axios;
+
+// export {
+//   axios,
+//   getFetcher,
+//   postFetcher,
+//   patchFetcher,
+//   putFetcher,
+//   deleteFetcher,
+// };

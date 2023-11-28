@@ -22,7 +22,7 @@ import { HiLocationMarker, HiLockClosed, HiMail, HiPhone, HiUser, HiCalendar } f
 import CustomDatepicker from '@/components/datepicker/CustomDatepicker';
 
 export default function CreateAccountPage() {
-  const [date, setDate] = useState();
+  const [date, setDate] = useState<Date>();
 
   return (
     <div className='w-full px-2'>
@@ -90,7 +90,7 @@ export default function CreateAccountPage() {
               <div className="mb-2 block">
                 <Label htmlFor="birthday" value="Birthday" />
               </div>
-              <CustomDatepicker onChange={(d:date) => { setDate(d); }} maxDate={new Date()}></CustomDatepicker>
+              <CustomDatepicker onChange={(d:Date) => { setDate(d); }} maxDate={new Date()}></CustomDatepicker>
             </div>
           </div>
           <div>

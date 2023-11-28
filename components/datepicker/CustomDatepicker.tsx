@@ -24,13 +24,13 @@ export default function CustomDatepicker({
   minDate=getDate({year: -100}),
   maxDate=getDate({year: 100}),
 } : {
-  isOpen: boolean,
-  date?: date,
+  isOpen?: boolean,
+  date?: Date,
   onChange: Function,
-  todayLabel: string,
-  clearLabel: string,
-  minDate: date,
-  maxDate: date,
+  todayLabel?: string,
+  clearLabel?: string,
+  minDate?: Date,
+  maxDate?: Date,
 }) {
   const [open, setOpen] = useState(isOpen);
   const [mode, setMode] = useState<'day'|'month'|'year'>('day');
@@ -38,7 +38,7 @@ export default function CustomDatepicker({
   const [pickerDate, setPickerDate] = useState(getDateYyyyMMdd());
   const [pickerDays, setPickerDays] = useState<string[]>(getDaysOfCalendar());
 
-  const handleOpen = (isOpen:false) => {
+  const handleOpen = (isOpen:boolean) => {
     if ( isOpen ) {
       setMode('day');
       const dStr = inputDate ? getDateYyyyMMdd(new Date(inputDate)) : getDateYyyyMMdd();
@@ -86,7 +86,7 @@ export default function CustomDatepicker({
     }
   }
 
-  const onClickDay = (day:string | undefined) => {
+  const onClickDay = (day?:string | undefined) => {
     setInputDate(day);
     onChange(day ? new Date(day) : undefined);
     setOpen(false);

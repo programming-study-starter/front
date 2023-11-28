@@ -2,6 +2,7 @@ import Header from '@/components/datepicker/day/Header';
 import Body from '@/components/datepicker/day/Body';
 
 import { CustomDatepickerType } from '@/components/datepicker/type/CustomDatepickerType';
+import { getDate } from '@/components/utils/DateUtil';
 
 export default function CustomDatepickerDay({
   onModeChange,

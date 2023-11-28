@@ -31,7 +31,7 @@ export default function CustomDatepickerDayBody({
             {
               pickerDays.map((day:string, idx:number) => {
                 const dayType = new Date(day).getDay();
-                const disabled = (new Date(day) < minDate | new Date(day) > maxDate);
+                const disabled = (new Date(day) < minDate || new Date(day) > maxDate);
                 let clsNm = '';
                 if (disabled) {
                   clsNm = 'text-gray-200';

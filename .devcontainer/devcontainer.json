@@ -32,7 +32,7 @@
         "files.eol": "\n",
         "editor.tabSize": 2,
         "editor.renderWhitespace": "all",
-        "typescript.validate.enable": false,
+        "typescript.validate.enable": true,
         "eslint.alwaysShowStatus": true,
         "editor.formatOnSave": true,
         "eslint.workingDirectories": [{ "mode": "auto" }],
